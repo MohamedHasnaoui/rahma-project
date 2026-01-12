@@ -276,7 +276,11 @@ const AboutPage = () => {
                 color: "amber",
               },
             ].map((item, index) => (
-              <div key={index} className="text-center group animate-fadeInUp" style={{ animationDelay: `${(index + 1) * 0.1}s` }}>
+              <div
+                key={index}
+                className="text-center group animate-fadeInUp"
+                style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+              >
                 <div
                   className={`w-20 h-20 bg-${item.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >

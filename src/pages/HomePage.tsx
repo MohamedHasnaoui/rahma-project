@@ -22,7 +22,9 @@ import { stats, initiatives } from "../data/siteData";
 
 const HomePage = () => {
   // Get ongoing initiatives for the carousel
-  const ongoingInitiatives = initiatives.filter(i => i.status === "جارية" || i.status === "قريباً").slice(0, 3);
+  const ongoingInitiatives = initiatives
+    .filter((i) => i.status === "جارية" || i.status === "قريباً")
+    .slice(0, 3);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Auto-slide every 5 seconds
@@ -38,7 +40,10 @@ const HomePage = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + ongoingInitiatives.length) % ongoingInitiatives.length);
+    setCurrentSlide(
+      (prev) =>
+        (prev - 1 + ongoingInitiatives.length) % ongoingInitiatives.length
+    );
   };
 
   return (
@@ -273,8 +278,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      
-
       {/* Progress Section - Initiatives Carousel */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,7 +289,8 @@ const HomePage = () => {
               ساهم في إتمام مبادراتنا
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              اختر المبادرة التي تريد المساهمة فيها وكن جزءاً من نشر العلم الشرعي
+              اختر المبادرة التي تريد المساهمة فيها وكن جزءاً من نشر العلم
+              الشرعي
             </p>
           </div>
 
@@ -310,18 +314,16 @@ const HomePage = () => {
 
             {/* Slides */}
             <div className="overflow-hidden rounded-[2.5rem]">
-              <div 
+              <div
                 className="flex transition-transform duration-700 ease-out"
                 style={{ transform: `translateX(${currentSlide * 100}%)` }}
               >
                 {ongoingInitiatives.map((initiative) => {
-                  const progressPercentage = (initiative.collectedAmount / initiative.goalAmount) * 100;
-                  
+                  const progressPercentage =
+                    (initiative.collectedAmount / initiative.goalAmount) * 100;
+
                   return (
-                    <div
-                      key={initiative.id}
-                      className="w-full flex-shrink-0"
-                    >
+                    <div key={initiative.id} className="w-full flex-shrink-0">
                       <div className="bg-gradient-to-br from-emerald-50 via-white to-amber-50 p-8 md:p-12 shadow-2xl border border-emerald-100 relative overflow-hidden">
                         {/* Decorative */}
                         <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-100/50 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -337,11 +339,13 @@ const HomePage = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div className="absolute top-4 right-4">
-                              <span className={`px-3 py-1.5 rounded-full text-xs font-bold ${
-                                initiative.status === "جارية" 
-                                  ? "bg-blue-500 text-white" 
-                                  : "bg-amber-500 text-white"
-                              }`}>
+                              <span
+                                className={`px-3 py-1.5 rounded-full text-xs font-bold ${
+                                  initiative.status === "جارية"
+                                    ? "bg-blue-500 text-white"
+                                    : "bg-amber-500 text-white"
+                                }`}
+                              >
                                 {initiative.status}
                               </span>
                             </div>
@@ -365,7 +369,9 @@ const HomePage = () => {
                             {/* Progress Bar */}
                             <div className="mb-6">
                               <div className="flex justify-between items-center mb-3">
-                                <span className="text-gray-600 font-medium">التقدم</span>
+                                <span className="text-gray-600 font-medium">
+                                  التقدم
+                                </span>
                                 <span className="text-2xl font-bold text-emerald-700">
                                   {progressPercentage.toFixed(0)}%
                                 </span>
@@ -382,13 +388,19 @@ const HomePage = () => {
                                 <span className="text-gray-500">
                                   تم جمع:{" "}
                                   <span className="font-bold text-emerald-600">
-                                    {initiative.collectedAmount.toLocaleString("ar-MA")} درهم
+                                    {initiative.collectedAmount.toLocaleString(
+                                      "ar-MA"
+                                    )}{" "}
+                                    درهم
                                   </span>
                                 </span>
                                 <span className="text-gray-500">
                                   الهدف:{" "}
                                   <span className="font-bold text-gray-700">
-                                    {initiative.goalAmount.toLocaleString("ar-MA")} درهم
+                                    {initiative.goalAmount.toLocaleString(
+                                      "ar-MA"
+                                    )}{" "}
+                                    درهم
                                   </span>
                                 </span>
                               </div>
@@ -400,8 +412,12 @@ const HomePage = () => {
                                 <Users className="w-6 h-6 text-emerald-600" />
                               </div>
                               <div>
-                                <p className="text-xl font-bold text-gray-900">{initiative.scholars}</p>
-                                <p className="text-sm text-gray-500">مشايخ سيستفيدون</p>
+                                <p className="text-xl font-bold text-gray-900">
+                                  {initiative.scholars}
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  مشايخ سيستفيدون
+                                </p>
                               </div>
                             </div>
 
@@ -438,9 +454,9 @@ const HomePage = () => {
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`الانتقال إلى ${initiative.name}`}
                   className={`transition-all duration-300 rounded-full ${
-                    currentSlide === index 
-                      ? 'w-10 h-3 bg-emerald-600' 
-                      : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                    currentSlide === index
+                      ? "w-10 h-3 bg-emerald-600"
+                      : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
               ))}
