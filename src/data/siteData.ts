@@ -96,7 +96,7 @@ export const initiatives = [
     description: "مشروع قادم لدعم الدعاة في العاصمة العلمية فاس",
     status: "جارية",
     image:
-      "https://images.pexels.com/photos/2233418/pexels-photo-2233418.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/29594127/pexels-photo-29594127.jpeg?auto=compress&cs=tinysrgb&w=600",
     scholars: 4,
     equipment: [],
     goalAmount: 300000,

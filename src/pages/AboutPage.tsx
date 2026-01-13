@@ -2,7 +2,6 @@ import {
   Eye,
   Target,
   Heart,
-  CheckCircle,
   Users,
   MapPin,
   BookOpen,
@@ -30,7 +29,7 @@ const AboutPage = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeInDown">
+          <span className="in          npx vercel login          npx vercel loginline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeInDown">
             <Sparkles className="w-4 h-4" />
             تعرف علينا
           </span>
