@@ -29,10 +29,10 @@ const AboutPage = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="in          npx vercel login          npx vercel loginline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeInDown">
+          <div className="mb-8 inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-6 py-3 rounded-full text-sm font-semibold backdrop-blur-sm border border-amber-400/30 animate-fadeInDown">
             <Sparkles className="w-4 h-4" />
-            تعرف علينا
-          </span>
+            <span>تعرف علينا</span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp">
             من نحن
           </h1>
