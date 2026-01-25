@@ -25,9 +25,9 @@ export const contactInfo = {
 
 // روابط التواصل الاجتماعي
 export const socialLinks = {
-  facebook: "https://facebook.com/alrahma",
-  instagram: "https://instagram.com/alrahma",
-  youtube: "https://youtube.com/@alrahma",
+  facebook: "https://facebook.com/",
+  instagram: "https://instagram.com/",
+  youtube: "https://youtube.com/",
 };
 
 // معلومات التبرع (RIB)
