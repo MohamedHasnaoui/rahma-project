@@ -42,7 +42,7 @@ const HomePage = () => {
   const prevSlide = () => {
     setCurrentSlide(
       (prev) =>
-        (prev - 1 + ongoingInitiatives.length) % ongoingInitiatives.length
+        (prev - 1 + ongoingInitiatives.length) % ongoingInitiatives.length,
     );
   };
 
@@ -297,20 +297,6 @@ const HomePage = () => {
           {/* Carousel Container */}
           <div className="relative animate-fadeInUp delay-200">
             {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              aria-label="المبادرة السابقة"
-              className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-emerald-600 hover:bg-emerald-50 transition-all hover:scale-110 border border-gray-100"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              aria-label="المبادرة التالية"
-              className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-emerald-600 hover:bg-emerald-50 transition-all hover:scale-110 border border-gray-100"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
 
             {/* Slides */}
             <div className="overflow-hidden rounded-[2.5rem]">
@@ -389,7 +375,7 @@ const HomePage = () => {
                                   تم جمع:{" "}
                                   <span className="font-bold text-emerald-600">
                                     {initiative.collectedAmount.toLocaleString(
-                                      "ar-MA"
+                                      "ar-MA",
                                     )}{" "}
                                     درهم
                                   </span>
@@ -398,7 +384,7 @@ const HomePage = () => {
                                   الهدف:{" "}
                                   <span className="font-bold text-gray-700">
                                     {initiative.goalAmount.toLocaleString(
-                                      "ar-MA"
+                                      "ar-MA",
                                     )}{" "}
                                     درهم
                                   </span>
@@ -422,18 +408,21 @@ const HomePage = () => {
                             </div>
 
                             {/* CTA */}
-                            <div className="flex gap-3">
+                            <div className="flex flex-col lg:flex-row gap-3 w-full">
+                              {/* Details Button */}
                               <Link
                                 to={`/initiatives/${initiative.id}`}
-                                className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-emerald-700 font-bold px-6 py-4 rounded-full text-lg border-2 border-emerald-600 transition-all duration-300 hover:scale-105"
+                                className="w-full lg:w-auto justify-center inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-emerald-700 font-bold px-6 py-4 rounded-full text-lg border-2 border-emerald-600 transition-all duration-300 hover:scale-105 whitespace-nowrap"
                               >
                                 التفاصيل
                               </Link>
+
+                              {/* Contribute Button */}
                               <Link
                                 to="/donate"
-                                className="flex-1 inline-flex items-center gap-3 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-emerald-500/25 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 justify-center"
+                                className="w-full lg:flex-1 justify-center inline-flex items-center gap-3 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-emerald-500/25 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 whitespace-nowrap"
                               >
-                                <HandHeart className="w-6 h-6" />
+                                <HandHeart className="w-6 h-6 flex-shrink-0" />
                                 ساهم في المبادرة
                               </Link>
                             </div>

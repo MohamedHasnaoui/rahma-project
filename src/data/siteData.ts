@@ -96,7 +96,7 @@ export const initiatives = [
     description: "مشروع قادم لدعم الدعاة في العاصمة العلمية فاس",
     status: "جارية",
     image:
-      "https://images.pexels.com/photos/29594127/pexels-photo-29594127.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://www.vanupied.com/wp-content/uploads/fes-monument-mosquee-karaouiyne-ahmed-magdy.jpg",
     scholars: 4,
     equipment: [],
     goalAmount: 300000,
@@ -138,8 +138,8 @@ export const scholars = [
     city: "مكناس",
     specialty: "العقيدة والفقه",
     image:
-      "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=400",
-    youtube: "https://youtube.com/@scholar1",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+    youtube: "https://youtube.com",
     lessonsCount: 120,
   },
   {
@@ -148,8 +148,8 @@ export const scholars = [
     city: "الخميسات",
     specialty: "التفسير والحديث",
     image:
-      "https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=400",
-    youtube: "https://youtube.com/@scholar2",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+    youtube: "https://youtube.com",
     lessonsCount: 85,
   },
   {
@@ -158,8 +158,8 @@ export const scholars = [
     city: "الصخيرات",
     specialty: "الفقه المالكي",
     image:
-      "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=400",
-    youtube: "https://youtube.com/@scholar3",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+    youtube: "https://youtube.com",
     lessonsCount: 60,
   },
   {
@@ -168,8 +168,8 @@ export const scholars = [
     city: "فاس",
     specialty: "علوم القرآن",
     image:
-      "https://images.pexels.com/photos/6647036/pexels-photo-6647036.jpeg?auto=compress&cs=tinysrgb&w=400",
-    youtube: "https://youtube.com/@scholar4",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+    youtube: "https://youtube.com",
     lessonsCount: 95,
   },
   {
@@ -178,8 +178,8 @@ export const scholars = [
     city: "مكناس",
     specialty: "السيرة النبوية",
     image:
-      "https://images.pexels.com/photos/6646919/pexels-photo-6646919.jpeg?auto=compress&cs=tinysrgb&w=400",
-    youtube: "https://youtube.com/@scholar5",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+    youtube: "https://youtube.com",
     lessonsCount: 70,
   },
 ];
@@ -224,7 +224,7 @@ export const lessons = [
     title: "شرح كتاب التوحيد - الدرس الأول",
     scholar: "الشيخ محمد الأمين",
     category: "العقيدة",
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
     duration: "45:30",
     date: "2025-12-01",
   },
@@ -233,7 +233,7 @@ export const lessons = [
     title: "تفسير سورة الفاتحة",
     scholar: "الشيخ عبد الرحمن السعيد",
     category: "التفسير",
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
     duration: "60:00",
     date: "2025-11-25",
   },
@@ -242,7 +242,7 @@ export const lessons = [
     title: "أحكام الصلاة في المذهب المالكي",
     scholar: "الشيخ يوسف البركاني",
     category: "الفقه",
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
     duration: "55:20",
     date: "2025-11-20",
   },
@@ -251,7 +251,7 @@ export const lessons = [
     title: "السيرة النبوية - المرحلة المكية",
     scholar: "الشيخ إبراهيم المكناسي",
     category: "السيرة",
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
     duration: "70:00",
     date: "2025-11-15",
   },
@@ -265,7 +265,7 @@ export const testimonials = [
     role: "داعية مدعوم",
     text: "بفضل الله ثم بفضل جمعية الرحمة، أصبح بإمكاني نشر دروسي لآلاف المسلمين عبر الإنترنت. جزاهم الله خيراً على هذا العمل المبارك.",
     image:
-      "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=200",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
   },
   {
     id: 2,
@@ -273,7 +273,7 @@ export const testimonials = [
     role: "متبرع منتظم",
     text: "أشعر بالفخر لمساهمتي في هذا المشروع العظيم. الشفافية والأمانة التي تتمتع بها الجمعية تجعلني أثق في وصول تبرعاتي.",
     image:
-      "https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=200",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
   },
   {
     id: 3,
@@ -281,7 +281,7 @@ export const testimonials = [
     role: "مستفيدة",
     text: "استفدت كثيراً من الدروس المنشورة. أصبح العلم الشرعي متاحاً للجميع بفضل هذه الجهود المباركة.",
     image:
-      "https://images.pexels.com/photos/6647010/pexels-photo-6647010.jpeg?auto=compress&cs=tinysrgb&w=200",
+      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
   },
 ];
 
@@ -334,7 +334,7 @@ export const palestineCampaign = {
   goalAmount: 500000,
   currentAmount: 320000,
   image:
-    "https://images.pexels.com/photos/2990650/pexels-photo-2990650.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://wallpapercave.com/wp/wp2875215.jpg?auto=compress&cs=tinysrgb&w=800",
   updates: [
     "تم إرسال الدفعة الأولى من المساعدات",
     "التنسيق مع الجمعيات الشريكة في غزة",

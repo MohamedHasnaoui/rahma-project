@@ -95,7 +95,7 @@ const InitiativeDetailPage = () => {
 
   const getEquipmentDetail = (name: string) => {
     return equipmentDetails.find(
-      (e) => e.name === name || name.includes(e.name.split(" ")[0])
+      (e) => e.name === name || name.includes(e.name.split(" ")[0]),
     );
   };
 
@@ -215,7 +215,7 @@ const InitiativeDetailPage = () => {
               {
                 label: "تم جمعه",
                 value: `${initiative.collectedAmount.toLocaleString(
-                  "ar-MA"
+                  "ar-MA",
                 )} درهم`,
                 icon: TrendingUp,
                 color: "blue",
@@ -314,23 +314,27 @@ const InitiativeDetailPage = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Amount Details */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-emerald-50 rounded-2xl p-4 text-center">
-                    <p className="text-2xl font-bold text-emerald-700">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                  {/* Box 1: Collected */}
+                  <div className="bg-emerald-50 rounded-2xl p-3 md:p-4 text-center">
+                    <p className="text-xl md:text-2xl font-bold text-emerald-700 truncate">
                       {initiative.collectedAmount.toLocaleString("ar-MA")}
                     </p>
                     <p className="text-emerald-600 text-sm">درهم تم جمعه</p>
                   </div>
-                  <div className="bg-amber-50 rounded-2xl p-4 text-center">
-                    <p className="text-2xl font-bold text-amber-700">
+
+                  {/* Box 2: Remaining */}
+                  <div className="bg-amber-50 rounded-2xl p-3 md:p-4 text-center">
+                    <p className="text-xl md:text-2xl font-bold text-amber-700 truncate">
                       {remainingAmount.toLocaleString("ar-MA")}
                     </p>
                     <p className="text-amber-600 text-sm">درهم متبقي</p>
                   </div>
-                  <div className="bg-blue-50 rounded-2xl p-4 text-center">
-                    <p className="text-2xl font-bold text-blue-700">
+
+                  {/* Box 3: Goal */}
+                  <div className="bg-blue-50 rounded-2xl p-3 md:p-4 text-center">
+                    <p className="text-xl md:text-2xl font-bold text-blue-700 truncate">
                       {initiative.goalAmount.toLocaleString("ar-MA")}
                     </p>
                     <p className="text-blue-600 text-sm">درهم الهدف</p>
