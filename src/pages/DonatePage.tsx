@@ -39,7 +39,7 @@ const DonatePage = () => {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950"></div>
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('https://muharaq.org/wp-content/uploads/2025/02/%D8%B5%D8%AF%D9%82%D8%A9-%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
@@ -195,37 +195,43 @@ const DonatePage = () => {
                   </p>
                 </div>
               </div>
-
               {/* RIB - Main */}
               <div className="bg-gradient-to-l from-amber-50 to-yellow-50 rounded-2xl p-6 border-2 border-amber-200 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-32 h-32 bg-amber-200/30 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="relative">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shadow-lg">
-                      <CreditCard className="w-6 h-6 text-white" />
+                  {/* FIXED HEADER: Added flex-wrap and justified alignment */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    {/* Icon and Text Group */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+                        <CreditCard className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <label className="text-sm text-amber-700 font-medium block whitespace-nowrap">
+                          رقم الحساب البنكي
+                        </label>
+                        <p className="text-xs text-amber-600">RIB</p>
+                      </div>
                     </div>
-                    <div>
-                      <label className="text-sm text-amber-700 font-medium">
-                        رقم الحساب البنكي
-                      </label>
-                      <p className="text-xs text-amber-600">RIB</p>
-                    </div>
-                    <div className="mr-auto">
-                      <span className="bg-amber-400 text-amber-900 px-3 py-1 rounded-full text-xs font-bold">
-                        الأكثر استخداماً
-                      </span>
-                    </div>
+
+                    {/* Badge: Now handles positioning automatically */}
+                    <span className="bg-amber-400 text-amber-900 px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                      الأكثر استخداماً
+                    </span>
                   </div>
-                  <div className="flex items-center justify-between gap-4 bg-white rounded-xl p-4 shadow-sm">
+
+                  {/* (Rest of the RIB number and copy button code...) */}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-xl p-4 shadow-sm">
+                    {/* ... keeping the previous fix for the number/button here ... */}
                     <p
-                      className="text-2xl font-bold text-gray-900 font-mono tracking-wider"
+                      className="text-lg sm:text-2xl font-bold text-gray-900 font-mono tracking-wider text-center sm:text-right break-all sm:break-normal"
                       dir="ltr"
                     >
                       {donationInfo.rib}
                     </p>
                     <button
                       onClick={() => copyToClipboard(donationInfo.rib, "rib")}
-                      className={`flex items-center gap-2 px-5 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 ${
+                      className={`w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 ${
                         copied === "rib"
                           ? "bg-green-500 text-white"
                           : "bg-amber-500 hover:bg-amber-600 text-white"
@@ -257,16 +263,18 @@ const DonatePage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between gap-4 bg-white rounded-xl p-4">
+
+                {/* FIXED IBAN CONTAINER */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-xl p-4">
                   <p
-                    className="text-lg font-bold text-gray-900 font-mono"
+                    className="text-sm sm:text-lg font-bold text-gray-900 font-mono text-center sm:text-right break-all"
                     dir="ltr"
                   >
                     {donationInfo.iban}
                   </p>
                   <button
                     onClick={() => copyToClipboard(donationInfo.iban, "iban")}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                    className={`w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                       copied === "iban"
                         ? "bg-green-500 text-white"
                         : "bg-blue-500 hover:bg-blue-600 text-white"
@@ -295,16 +303,18 @@ const DonatePage = () => {
                     <p className="text-xs text-gray-500">SWIFT Code</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between gap-4 bg-white rounded-xl p-4">
+
+                {/* FIXED SWIFT CONTAINER */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-xl p-4">
                   <p
-                    className="text-lg font-bold text-gray-900 font-mono"
+                    className="text-lg font-bold text-gray-900 font-mono text-center sm:text-right"
                     dir="ltr"
                   >
                     {donationInfo.swift}
                   </p>
                   <button
                     onClick={() => copyToClipboard(donationInfo.swift, "swift")}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                    className={`w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                       copied === "swift"
                         ? "bg-green-500 text-white"
                         : "bg-gray-600 hover:bg-gray-700 text-white"
@@ -343,7 +353,7 @@ const DonatePage = () => {
       {/* Impact Section */}
       <section className="py-20 bg-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('https://studioarabiya.com/wp-content/uploads/2024/09/2-6.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

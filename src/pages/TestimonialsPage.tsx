@@ -20,7 +20,7 @@ const TestimonialsPage = () => {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950"></div>
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('https://wallpapers.com/images/hd/islamic-background-gcug09kvji635mg4.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
@@ -88,7 +88,7 @@ const TestimonialsPage = () => {
                     <img
                       src={
                         testimonials[0]?.image ||
-                        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+                        "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg"
                       }
                       alt={testimonials[0]?.name}
                       className="w-full h-full object-cover"
@@ -256,7 +256,7 @@ const TestimonialsPage = () => {
       {/* Share Your Story */}
       <section className="py-20 bg-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('https://studioarabiya.com/wp-content/uploads/2024/09/2-6.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">

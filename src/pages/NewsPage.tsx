@@ -25,7 +25,7 @@ const NewsPage = () => {
       <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950"></div>
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('https://thumbs.dreamstime.com/b/islamic-devotion-unity-grand-congregational-prayer-islamic-devotion-unity-grand-congregational-prayer-369402959.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
@@ -215,7 +215,7 @@ const NewsPage = () => {
       {/* Newsletter Section */}
       <section className="py-20 bg-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('https://studioarabiya.com/wp-content/uploads/2024/09/2-6.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
 

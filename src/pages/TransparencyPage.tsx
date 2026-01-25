@@ -22,15 +22,15 @@ const TransparencyPage = () => {
   // Calculate totals
   const totalDonations = financialReports.reduce(
     (acc, r) => acc + r.totalDonations,
-    0
+    0,
   );
   const totalExpenses = financialReports.reduce(
     (acc, r) => acc + r.totalExpenses,
-    0
+    0,
   );
   const totalBeneficiaries = financialReports.reduce(
     (acc, r) => acc + r.beneficiaries,
-    0
+    0,
   );
 
   return (
@@ -249,7 +249,7 @@ const TransparencyPage = () => {
       {/* Expense Breakdown */}
       <section className="py-20 bg-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('https://studioarabiya.com/wp-content/uploads/2024/09/2-6.jpg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
