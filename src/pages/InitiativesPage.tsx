@@ -3,10 +3,6 @@ import {
   MapPin,
   Users,
   CheckCircle,
-  Camera,
-  Mic,
-  Lightbulb,
-  HardDrive,
   Sparkles,
   Filter,
   Clock,
@@ -143,8 +139,8 @@ const InitiativesPage = () => {
                           initiative.status === "مكتملة"
                             ? "bg-green-500 text-white"
                             : initiative.status === "جارية"
-                            ? "bg-blue-500 text-white"
-                            : "bg-amber-500 text-white"
+                              ? "bg-blue-500 text-white"
+                              : "bg-amber-500 text-white"
                         }`}
                       >
                         {initiative.status === "مكتملة" && (
@@ -300,8 +296,8 @@ const InitiativesPage = () => {
                   city.status === "active"
                     ? "bg-white/10 border-emerald-400/30 hover:bg-white/20"
                     : city.status === "upcoming"
-                    ? "bg-amber-400/10 border-amber-400/30 hover:bg-amber-400/20"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                      ? "bg-amber-400/10 border-amber-400/30 hover:bg-amber-400/20"
+                      : "bg-white/5 border-white/10 hover:bg-white/10"
                 }`}
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -310,8 +306,8 @@ const InitiativesPage = () => {
                       city.status === "active"
                         ? "bg-emerald-400 animate-pulse"
                         : city.status === "upcoming"
-                        ? "bg-amber-400"
-                        : "bg-gray-400"
+                          ? "bg-amber-400"
+                          : "bg-gray-400"
                     }`}
                   ></div>
                   <h3 className="text-lg font-bold text-white">{city.name}</h3>
@@ -321,8 +317,8 @@ const InitiativesPage = () => {
                     {city.status === "active"
                       ? "نشطة"
                       : city.status === "upcoming"
-                      ? "قريباً"
-                      : "مخططة"}
+                        ? "قريباً"
+                        : "مخططة"}
                   </span>
                   {city.scholars > 0 && (
                     <span className="text-amber-400 text-sm font-medium">
@@ -336,56 +332,6 @@ const InitiativesPage = () => {
         </div>
       </section>
 
-      {/* Equipment Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              التجهيزات
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              الأدوات التي نوفرها
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              نوفر للمشايخ جميع الأدوات اللازمة لتسجيل ونشر دروسهم بجودة عالية
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 animate-fadeInUp delay-200">
-            {[
-              {
-                name: "كاميرا احترافية",
-                desc: "لتصوير الدروس بجودة عالية",
-                icon: Camera,
-              },
-              { name: "ميكروفون", desc: "لتسجيل صوت واضح ونقي", icon: Mic },
-              {
-                name: "إضاءة",
-                desc: "لإضاءة مثالية أثناء التصوير",
-                icon: Lightbulb,
-              },
-              {
-                name: "ذاكرة تخزين",
-                desc: "لحفظ الدروس والمحاضرات",
-                icon: HardDrive,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group text-center p-6 rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 hover-lift"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-10 h-10 text-emerald-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-l from-amber-400 to-yellow-500 animate-fadeInUp">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

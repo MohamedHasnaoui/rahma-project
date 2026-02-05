@@ -45,6 +45,7 @@ const Header = () => {
     { name: "من نحن", path: "/about" },
     { name: "مبادراتنا", path: "/initiatives" },
     { name: "المشايخ", path: "/scholars" },
+    { name: "الأجهزة", path: "/equipment" },
   ];
 
   const moreLinks = {
@@ -161,10 +162,10 @@ const Header = () => {
                 link.primary
                   ? "bg-emerald-600 text-white hover:bg-emerald-700 shadow-md"
                   : link.highlight
-                  ? "bg-red-50 text-red-700 hover:bg-red-100 border border-red-200"
-                  : isActive(link.path)
-                  ? "bg-emerald-100 text-emerald-800"
-                  : "text-emerald-700 hover:bg-emerald-50"
+                    ? "bg-red-50 text-red-700 hover:bg-red-100 border border-red-200"
+                    : isActive(link.path)
+                      ? "bg-emerald-100 text-emerald-800"
+                      : "text-emerald-700 hover:bg-emerald-50"
               }`}
             >
               {link.name}

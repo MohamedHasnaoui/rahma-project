@@ -15,6 +15,7 @@ import LessonsPage from "./pages/LessonsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import FaqPage from "./pages/FaqPage";
 import ContactPage from "./pages/ContactPage";
+import EquipmentPage from "./pages/EquipmentPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/initiatives" element={<InitiativesPage />} />
           <Route path="/initiatives/:id" element={<InitiativeDetailPage />} />
+          <Route path="/equipment" element={<EquipmentPage />} />
           <Route path="/scholars" element={<ScholarsPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/palestine" element={<PalestinePage />} />

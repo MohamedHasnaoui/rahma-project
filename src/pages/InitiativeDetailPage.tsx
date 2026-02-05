@@ -4,9 +4,6 @@ import {
   Users,
   CheckCircle,
   Camera,
-  Mic,
-  Lightbulb,
-  HardDrive,
   Sparkles,
   Clock,
   ArrowRight,
@@ -59,45 +56,7 @@ const InitiativeDetailPage = () => {
     (initiative.collectedAmount / initiative.goalAmount) * 100;
   const remainingAmount = initiative.goalAmount - initiative.collectedAmount;
 
-  // Equipment details
-  const equipmentDetails = [
-    {
-      name: "كاميرا",
-      icon: Camera,
-      desc: "كاميرا احترافية للتصوير بجودة عالية",
-      price: 15000,
-    },
-    {
-      name: "كاميرا احترافية",
-      icon: Camera,
-      desc: "كاميرا DSLR أو Mirrorless للتصوير الاحترافي",
-      price: 25000,
-    },
-    {
-      name: "ميكروفون",
-      icon: Mic,
-      desc: "ميكروفون لاسلكي لتسجيل صوت واضح",
-      price: 3000,
-    },
-    {
-      name: "إضاءة",
-      icon: Lightbulb,
-      desc: "نظام إضاءة LED للتصوير المثالي",
-      price: 5000,
-    },
-    {
-      name: "حامل",
-      icon: HardDrive,
-      desc: "حامل ثلاثي متين للكاميرا",
-      price: 2000,
-    },
-  ];
 
-  const getEquipmentDetail = (name: string) => {
-    return equipmentDetails.find(
-      (e) => e.name === name || name.includes(e.name.split(" ")[0]),
-    );
-  };
 
   const getStatusInfo = () => {
     switch (initiative.status) {
@@ -352,33 +311,63 @@ const InitiativeDetailPage = () => {
                 </h2>
 
                 {initiative.equipment.length > 0 ? (
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {initiative.equipment.map((eq, index) => {
-                      const detail = getEquipmentDetail(eq);
-                      const Icon = detail?.icon || Camera;
-                      return (
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {initiative.equipment.map((eq, index) => (
+                      <div
+                        key={index}
+                        className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group border border-gray-100 hover:border-emerald-300"
+                      >
+                        {/* Equipment Image */}
                         <div
-                          key={index}
-                          className="flex items-start gap-4 p-4 bg-gray-50 rounded-2xl hover:bg-emerald-50 transition-colors group"
-                        >
-                          <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-                            <Icon className="w-7 h-7 text-emerald-600" />
+                          className="h-48 bg-white bg-contain bg-center bg-no-repeat"
+                          style={{
+                            backgroundImage: `url(${eq.image})`,
+                          }}
+                        />
+
+                        {/* Equipment Details */}
+                        <div className="p-5">
+                          <h4 className="font-bold text-gray-900 text-lg mb-1">
+                            {eq.name}
+                          </h4>
+                          <p className="text-gray-500 text-sm mb-3">
+                            {eq.nameEn}
+                          </p>
+
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-gray-600 text-sm">
+                              السعر:
+                            </span>
+                            <span className="text-emerald-600 font-bold">
+                              {eq.price.toLocaleString("ar-MA")} د
+                            </span>
                           </div>
-                          <div className="flex-1">
-                            <h4 className="font-bold text-gray-900">{eq}</h4>
-                            <p className="text-gray-600 text-sm">
-                              {detail?.desc || "تجهيز تقني للتصوير"}
-                            </p>
-                            {detail?.price && (
-                              <p className="text-emerald-600 font-medium text-sm mt-1">
-                                ~{detail.price.toLocaleString("ar-MA")} درهم
-                              </p>
-                            )}
+
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-gray-600 text-sm">
+                              الكمية:
+                            </span>
+                            <span className="text-blue-600 font-bold">
+                              {eq.quantity} {eq.quantity === 1 ? "قطعة" : "قطع"}
+                            </span>
                           </div>
-                          <CheckCircle className="w-6 h-6 text-green-500" />
+
+                          <div className="pt-3 border-t border-gray-200">
+                            <div className="flex items-center justify-between">
+                              <span className="text-gray-700 font-medium">
+                                المجموع:
+                              </span>
+                              <span className="text-emerald-700 font-bold text-lg">
+                                {(eq.price * eq.quantity).toLocaleString(
+                                  "ar-MA",
+                                )}{" "}
+                                د
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   <div className="text-center py-8 bg-gray-50 rounded-2xl">

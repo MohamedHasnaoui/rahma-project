@@ -3,7 +3,6 @@ import {
   CheckCircle,
   Users,
   Package,
-  Truck,
   HandHeart,
   Shield,
   ArrowLeft,

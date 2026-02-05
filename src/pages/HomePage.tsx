@@ -15,10 +15,8 @@ import {
   Target,
   HandHeart,
   TrendingUp,
-  ChevronRight,
-  ChevronLeft,
 } from "lucide-react";
-import { stats, initiatives } from "../data/siteData";
+import { stats, initiatives, featuredEquipment } from "../data/siteData";
 
 const HomePage = () => {
   // Get ongoing initiatives for the carousel
@@ -274,6 +272,79 @@ const HomePage = () => {
                 <p className="text-emerald-200 text-sm">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Equipment Section */}
+      <section className="py-20 bg-gradient-to-b from-emerald-50 via-emerald-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              كيف تساهم؟
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              ساهم بالتبرع بالأجهزة
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              يمكنك المساهمة بشراء وتبرع الأجهزة مباشرة أو بالتبرع المالي
+            </p>
+          </div>
+
+          {/* Featured 3 Items Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {featuredEquipment.map((equipment, index) => (
+              <div
+                key={equipment.id}
+                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-emerald-300 hover:-translate-y-2"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Image */}
+                <div
+                  className="relative h-64 bg-gray-50 overflow-hidden bg-contain bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url(${equipment.image})`,
+                  }}
+                >
+                  {/* Price Badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-emerald-600 text-white px-4 py-2 rounded-full text-base font-bold shadow-xl">
+                      {equipment.price.toLocaleString("ar-MA")} د
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="font-bold text-gray-900 text-xl mb-2">
+                    {equipment.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mb-3">
+                    {equipment.nameEn}
+                  </p>
+                  <p className="text-gray-600 mb-4">{equipment.description}</p>
+
+                  {/* Action Button */}
+                  <Link
+                    to="/donate"
+                    className="block w-full text-center bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    ساهم في توفيره
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* View All Equipment CTA */}
+          <div className="text-center animate-fadeInUp delay-300">
+            <Link
+              to="/equipment"
+              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span>تصفح جميع الأجهزة</span>
+              <ArrowLeft className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>
