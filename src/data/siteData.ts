@@ -61,6 +61,22 @@ export const initiatives = [
     scholars: 1,
     equipment: [
       {
+        name: "كاميرا Sony 4K احترافية",
+        nameEn: "Sony 4K Professional Camcorder",
+        image:
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+        price: 20000,
+        quantity: 1,
+      },
+      {
+        name: "حامل ثلاثي",
+        nameEn: "Tripod",
+        image:
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
+        price: 1000,
+        quantity: 1,
+      },
+      {
         name: "بطاقة ذاكرة SD",
         nameEn: "SD Memory Card",
         image:
@@ -69,200 +85,168 @@ export const initiatives = [
         quantity: 1,
       },
       {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
+        name: "قرص صلب خارجي",
+        nameEn: "External Hard Drive",
         image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 1,
-      },
-      {
-        name: "حامل ثلاثي",
-        nameEn: "Tripod",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
-        price: 800,
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_450,h_400,c_pad/v1770237906/WhatsApp_Image_2026-02-04_at_21.41.51_fgb5i8.png",
+        price: 1000,
         quantity: 1,
       },
     ],
-    collectedAmount: 1300,
+    collectedAmount: 22300,
   },
   {
     id: 2,
     name: "مبادرة الصخيرات",
     city: "الصخيرات",
     description: "دعم الدعاة والأساتذة في مدينة الصخيرات لنشر العلم الشرعي",
-    status: "جارية",
+    status: "مكتملة",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770315691/skhirate_ypznj1.jpg",
     scholars: 2,
     equipment: [
       {
-        name: "كاميرا Sony 4K احترافية",
-        nameEn: "Sony 4K Professional Camcorder",
+        name: "كاميرا Sony Alpha رقمية",
+        nameEn: "Sony Alpha Digital Camera",
         image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.48_phuk3j.png",
         price: 20000,
-        quantity: 2,
-      },
-      {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 2,
-      },
-    ],
-    collectedAmount: 25000,
-  },
-  {
-    id: 3,
-    name: "مبادرة مكناس",
-    city: "مكناس",
-    description: "تجهيز دعاة مدينة مكناس بأحدث الأدوات التقنية للتصوير والبث",
-    status: "مكتملة",
-    image: "https://images.unsplash.com/photo-1706793989006-f0238c69f4a2",
-    scholars: 5,
-    equipment: [
-      {
-        name: "كاميرا Sony 4K احترافية",
-        nameEn: "Sony 4K Professional Camcorder",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
-        price: 20000,
-        quantity: 5,
-      },
-      {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 5,
-      },
-      {
-        name: "إضاءة LED احترافية",
-        nameEn: "Professional LED Lights",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
-        price: 2000,
-        quantity: 5,
+        quantity: 1,
       },
       {
         name: "حامل ثلاثي",
         nameEn: "Tripod",
         image:
           "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
-        price: 800,
-        quantity: 5,
+        price: 1000,
+        quantity: 1,
+      },
+      {
+        name: "بطاقة ذاكرة SD",
+        nameEn: "SD Memory Card",
+        image:
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.45_1_mnimjv.png",
+        price: 300,
+        quantity: 1,
       },
     ],
-    collectedAmount: 115000,
+    collectedAmount: 21300,
   },
-  {
-    id: 4,
-    name: "مبادرة فاس",
-    city: "فاس",
-    description: "مشروع قادم لدعم الدعاة في العاصمة العلمية فاس",
-    status: "جارية",
-    image:
-      "https://www.vanupied.com/wp-content/uploads/fes-monument-mosquee-karaouiyne-ahmed-magdy.jpg",
-    scholars: 4,
-    equipment: [
-      {
-        name: "كاميرا Sony 4K احترافية",
-        nameEn: "Sony 4K Professional Camcorder",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
-        price: 20000,
-        quantity: 4,
-      },
-      {
-        name: "حاسوب",
-        nameEn: "Computer",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/e_background_removal/w_400,h_400,c_pad/v1770237901/WhatsApp_Image_2026-02-04_at_21.41.51_1_lubl8d.png",
-        price: 4000,
-        quantity: 4,
-      },
-      {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 4,
-      },
-    ],
-    collectedAmount: 45000,
-  },
-  {
-    id: 5,
-    name: "مبادرة الرباط",
-    city: "الرباط",
-    description: "دعم المشايخ والدعاة في العاصمة الرباط بالتجهيزات اللازمة",
-    status: "قريباً",
-    image:
-      "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770315913/rabat_gjqwun.jpg",
-    scholars: 6,
-    equipment: [
-      {
-        name: "كاميرا Sony 4K احترافية",
-        nameEn: "Sony 4K Professional Camcorder",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
-        price: 20000,
-        quantity: 6,
-      },
-      {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 6,
-      },
-      {
-        name: "إضاءة LED احترافية",
-        nameEn: "Professional LED Lights",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
-        price: 2000,
-        quantity: 6,
-      },
-    ],
-    collectedAmount: 20000,
-  },
-  {
-    id: 6,
-    name: "مبادرة طنجة",
-    city: "طنجة",
-    description: "تجهيز المساجد والدعاة بمدينة طنجة بالأدوات اللازمة للتصوير",
-    status: "قريباً",
-    image:
-      "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770316085/tanger_rphg33.jpg",
-    scholars: 3,
-    equipment: [
-      {
-        name: "كاميرا Sony 4K احترافية",
-        nameEn: "Sony 4K Professional Camcorder",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
-        price: 20000,
-        quantity: 3,
-      },
-      {
-        name: "ميكروفون مكتبي",
-        nameEn: "Desktop Microphone",
-        image:
-          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-        price: 200,
-        quantity: 3,
-      },
-    ],
-    collectedAmount: 10000,
-  },
+  // {
+  //   id: 3,
+  //   name: "مبادرة مكناس",
+  //   city: "مكناس",
+  //   description: "تجهيز دعاة مدينة مكناس بأحدث الأدوات التقنية للتصوير والبث",
+  //   status: "مكتملة",
+  //   image: "https://images.unsplash.com/photo-1706793989006-f0238c69f4a2",
+  //   scholars: 5,
+  //   equipment: [
+  //     {
+  //       name: "كاميرا Sony 4K احترافية",
+  //       nameEn: "Sony 4K Professional Camcorder",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+  //       price: 20000,
+  //       quantity: 5,
+  //     },
+  //     {
+  //       name: "إضاءة LED احترافية",
+  //       nameEn: "Professional LED Lights",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
+  //       price: 2000,
+  //       quantity: 5,
+  //     },
+  //     {
+  //       name: "حامل ثلاثي",
+  //       nameEn: "Tripod",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
+  //       price: 1000,
+  //       quantity: 5,
+  //     },
+  //   ],
+  //   collectedAmount: 115000,
+  // },
+  // {
+  //   id: 4,
+  //   name: "مبادرة فاس",
+  //   city: "فاس",
+  //   description: "مشروع قادم لدعم الدعاة في العاصمة العلمية فاس",
+  //   status: "جارية",
+  //   image:
+  //     "https://www.vanupied.com/wp-content/uploads/fes-monument-mosquee-karaouiyne-ahmed-magdy.jpg",
+  //   scholars: 1,
+  //   equipment: [
+  //     {
+  //       name: "كاميرا Sony 4K احترافية",
+  //       nameEn: "Sony 4K Professional Camcorder",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+  //       price: 20000,
+  //       quantity: 4,
+  //     },
+  //     {
+  //       name: "حاسوب",
+  //       nameEn: "Computer",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/e_background_removal/w_400,h_400,c_pad/v1770237901/WhatsApp_Image_2026-02-04_at_21.41.51_1_lubl8d.png",
+  //       price: 10000,
+  //       quantity: 4,
+  //     },
+  //   ],
+  //   collectedAmount: 45000,
+  // },
+  // {
+  //   id: 5,
+  //   name: "مبادرة الرباط",
+  //   city: "الرباط",
+  //   description: "دعم المشايخ والدعاة في العاصمة الرباط بالتجهيزات اللازمة",
+  //   status: "قريباً",
+  //   image:
+  //     "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770315913/rabat_gjqwun.jpg",
+  //   scholars: 6,
+  //   equipment: [
+  //     {
+  //       name: "كاميرا Sony 4K احترافية",
+  //       nameEn: "Sony 4K Professional Camcorder",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+  //       price: 20000,
+  //       quantity: 6,
+  //     },
+  //     {
+  //       name: "إضاءة LED احترافية",
+  //       nameEn: "Professional LED Lights",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
+  //       price: 2000,
+  //       quantity: 6,
+  //     },
+  //   ],
+  //   collectedAmount: 20000,
+  // },
+  // {
+  //   id: 6,
+  //   name: "مبادرة طنجة",
+  //   city: "طنجة",
+  //   description: "تجهيز المساجد والدعاة بمدينة طنجة بالأدوات اللازمة للتصوير",
+  //   status: "قريباً",
+  //   image:
+  //     "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770316085/tanger_rphg33.jpg",
+  //   scholars: 3,
+  //   equipment: [
+  //     {
+  //       name: "كاميرا Sony 4K احترافية",
+  //       nameEn: "Sony 4K Professional Camcorder",
+  //       image:
+  //         "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
+  //       price: 20000,
+  //       quantity: 3,
+  //     },
+  //   ],
+  //   collectedAmount: 10000,
+  // },
 ].map((initiative) => ({
   ...initiative,
   goalAmount: initiative.equipment.reduce(
@@ -589,7 +573,6 @@ export const equipmentCatalog = [
     name: "كابل USB",
     nameEn: "USB Cable",
     price: 50,
-    priceNote: "النوع الأفضل: 100 د",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.48_vtvzow.png",
     description: "لنقل البيانات",
@@ -598,7 +581,7 @@ export const equipmentCatalog = [
     id: 2,
     name: "كاميرا Sony Alpha رقمية",
     nameEn: "Sony Alpha Digital Camera",
-    price: 4000,
+    price: 20000,
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.48_phuk3j.png",
     description: "كاميرا رقمية متطورة للتصوير",
@@ -634,7 +617,7 @@ export const equipmentCatalog = [
     id: 6,
     name: "حامل ثلاثي القوائم",
     nameEn: "Camera Tripod",
-    price: 300,
+    price: 1000,
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
     description: "لتثبيت الكاميرا",
@@ -643,7 +626,8 @@ export const equipmentCatalog = [
     id: 7,
     name: "جهاز التقاط فيديو HDMI",
     nameEn: "HDMI Video Capture Device",
-    price: 1000,
+    price: 100,
+    priceNote: "النوع الأفضل: 200 د",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/e_background_removal/w_400,h_400/v1770237912/WhatsApp_Image_2026-02-04_at_21.41.52_ok4mkr.png",
     description: "لنقل الفيديو للحاسوب",
@@ -663,7 +647,6 @@ export const equipmentCatalog = [
     name: "كابل HDMI",
     nameEn: "HDMI Cable",
     price: 50,
-    priceNote: "النوع الأفضل: 200 د",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.46_eqvmzj.png",
     description: "لتوصيل الأجهزة",
@@ -677,21 +660,21 @@ export const equipmentCatalog = [
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.45_1_mnimjv.png",
     description: "لتخزين الفيديوهات",
   },
-  {
-    id: 11,
-    name: "ميكروفون مكتبي",
-    nameEn: "Desktop Microphone",
-    price: 200,
-    image:
-      "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-    description: "للتسجيل الصوتي",
-  },
+  // {
+  //   id: 11,
+  //   name: "ميكروفون مكتبي",
+  //   nameEn: "Desktop Microphone",
+  //   price: 200,
+  //   image:
+  //     "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
+  //   description: "للتسجيل الصوتي",
+  // },
   {
     id: 12,
     name: "كاميرا Sony 4K احترافية",
     nameEn: "Sony 4K Professional Camcorder",
     price: 20000,
-    priceNote: "جديدة أو مستعملة",
+    priceNote: "مستعملة 10.000 د",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
     description: "لتصوير احترافي بدقة 4K",
@@ -700,7 +683,7 @@ export const equipmentCatalog = [
     id: 13,
     name: "حاسوب",
     nameEn: "Computer",
-    price: 4000,
+    price: 10000,
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/e_background_removal/w_400,h_400,c_pad/v1770237901/WhatsApp_Image_2026-02-04_at_21.41.51_1_lubl8d.png",
     description: "لمونتاج وتحرير الفيديوهات",
@@ -714,7 +697,7 @@ export const featuredEquipment = [
     name: "كاميرا Sony 4K احترافية",
     nameEn: "Sony 4K Professional Camcorder",
     price: 20000,
-    priceNote: "جديدة أو مستعملة",
+    priceNote: "مستعملة 10.000 د",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237898/WhatsApp_Image_2026-02-03_at_23.31.46_pzlmrj.png",
     description: "لتصوير احترافي بدقة 4K",
@@ -729,13 +712,13 @@ export const featuredEquipment = [
     description: "إضاءة مثالية للتصوير",
   },
   {
-    id: 3,
-    name: "ميكروفون مكتبي",
-    nameEn: "Desktop Microphone",
-    price: 200,
+    id: 6,
+    name: "حامل ثلاثي القوائم",
+    nameEn: "Camera Tripod",
+    price: 1000,
     image:
-      "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-    description: "للتسجيل الصوتي",
+      "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.49_dx3g8m.png",
+    description: "لتثبيت الكاميرا",
   },
 ];
 
