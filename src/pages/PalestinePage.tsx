@@ -11,6 +11,7 @@ import {
   Calendar,
   Target,
   TrendingUp,
+  FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { palestineCampaign } from "../data/siteData";
@@ -128,7 +129,7 @@ const PalestinePage = () => {
                       <p className="text-sm text-gray-500">تم جمع</p>
                       <p className="text-xl font-bold text-green-600">
                         {palestineCampaign.currentAmount.toLocaleString(
-                          "ar-MA"
+                          "ar-MA",
                         )}{" "}
                         درهم
                       </p>
@@ -163,19 +164,33 @@ const PalestinePage = () => {
                     آخر المستجدات
                   </h3>
                 </div>
-                <div className="space-y-3">
-                  {palestineCampaign.updates.map((update, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 bg-green-50 p-4 rounded-xl border border-green-100 hover:bg-green-100 transition-colors"
-                    >
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-4 h-4 text-white" />
+                {palestineCampaign.updates.length > 0 ? (
+                  <div className="space-y-3">
+                    {palestineCampaign.updates.map((update, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 bg-green-50 p-4 rounded-xl border border-green-100 hover:bg-green-100 transition-colors"
+                      >
+                        <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-4 h-4 text-white" />
+                        </div>
+                        <p className="text-green-800 font-medium">{update}</p>
                       </div>
-                      <p className="text-green-800 font-medium">{update}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-12 animate-fadeInUp">
+                    <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Calendar className="w-10 h-10 text-amber-600" />
                     </div>
-                  ))}
-                </div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                      قريباً
+                    </h4>
+                    <p className="text-gray-600 max-w-md mx-auto">
+                      سنشارك قريباً آخر المستجدات حول الحملة
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* CTA */}
@@ -285,21 +300,33 @@ const PalestinePage = () => {
                   </Link>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-6">
                   {[
-                    { value: "100%", label: "شفافية" },
-                    { value: "0%", label: "مصاريف إدارية" },
-                    { value: "24/7", label: "متابعة مستمرة" },
-                    { value: "تقارير", label: "شهرية" },
+                    { value: "100%", label: "شفافية كاملة", icon: Shield },
+                    {
+                      value: "24/7",
+                      label: "متابعة مستمرة",
+                      icon: CheckCircle,
+                    },
+                    {
+                      value: "تقارير شهرية",
+                      label: "تحديثات دورية",
+                      icon: FileText,
+                    },
                   ].map((stat, index) => (
                     <div
                       key={index}
-                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/20"
+                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 flex items-center gap-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
                     >
-                      <p className="text-2xl font-bold text-white">
-                        {stat.value}
-                      </p>
-                      <p className="text-green-200 text-sm">{stat.label}</p>
+                      <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <stat.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-right">
+                        <p className="text-2xl font-bold  text-white mb-1">
+                          {stat.value}
+                        </p>
+                        <p className="text-green-100 text-sm">{stat.label}</p>
+                      </div>
                     </div>
                   ))}
                 </div>

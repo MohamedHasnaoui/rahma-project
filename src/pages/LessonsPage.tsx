@@ -146,7 +146,17 @@ const LessonsPage = () => {
       {/* Lessons Grid */}
       <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredLessons.length > 0 ? (
+          {lessons.length === 0 ? (
+            <div className="text-center py-16 animate-fadeInUp">
+              <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="w-12 h-12 text-emerald-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">قريباً</h3>
+              <p className="text-gray-600 text-lg max-w-md mx-auto">
+                سنشارك قريباً دروس المشايخ والعلماء
+              </p>
+            </div>
+          ) : filteredLessons.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-8">
               {filteredLessons.map((lesson, index) => (
                 <div

@@ -102,101 +102,114 @@ const ScholarsPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {scholars.map((scholar, index) => (
-              <div
-                key={scholar.id}
-                className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Scholar Image */}
-                <div className="relative h-72 overflow-hidden">
-                  <img
-                    src={scholar.image}
-                    alt={scholar.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          {scholars.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {scholars.map((scholar, index) => (
+                <div
+                  key={scholar.id}
+                  className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Scholar Image */}
+                  <div className="relative h-72 overflow-hidden">
+                    <img
+                      src={scholar.image}
+                      alt={scholar.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
-                  {/* Verified Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-bold inline-flex items-center gap-1">
-                      <CheckCircle className="w-3 h-3" />
-                      معتمد
-                    </span>
+                    {/* Verified Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-bold inline-flex items-center gap-1">
+                        <CheckCircle className="w-3 h-3" />
+                        معتمد
+                      </span>
+                    </div>
+
+                    {/* Scholar Info Overlay */}
+                    <div className="absolute bottom-0 right-0 left-0 p-6">
+                      <div className="flex items-center gap-2 text-emerald-300 text-sm mb-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>{scholar.city}</span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-1">
+                        {scholar.name}
+                      </h3>
+                      <p className="text-amber-400 font-medium">
+                        {scholar.specialty}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Scholar Info Overlay */}
-                  <div className="absolute bottom-0 right-0 left-0 p-6">
-                    <div className="flex items-center gap-2 text-emerald-300 text-sm mb-2">
-                      <MapPin className="w-4 h-4" />
-                      <span>{scholar.city}</span>
+                  {/* Scholar Details */}
+                  <div className="p-6">
+                    {/* Stats Row */}
+                    <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                          <BookOpen className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div>
+                          <p className="text-lg font-bold text-gray-900">
+                            {scholar.lessonsCount}
+                          </p>
+                          <p className="text-gray-500 text-xs">درس مسجل</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star
+                            key={star}
+                            className="w-4 h-4 text-amber-400 fill-amber-400"
+                          />
+                        ))}
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      {scholar.name}
-                    </h3>
-                    <p className="text-amber-400 font-medium">
-                      {scholar.specialty}
-                    </p>
+
+                    {/* Equipment Provided */}
+                    <div className="mb-6">
+                      <p className="text-sm text-gray-500 mb-3">
+                        التجهيزات المقدمة:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {["كاميرا", "ميكروفون", "إضاءة"].map((item, i) => (
+                          <span
+                            key={i}
+                            className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* YouTube Link */}
+                    <a
+                      href={scholar.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-3 bg-gradient-to-l from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 w-full"
+                    >
+                      <Youtube className="w-5 h-5" />
+                      شاهد الدروس على يوتيوب
+                    </a>
                   </div>
                 </div>
-
-                {/* Scholar Details */}
-                <div className="p-6">
-                  {/* Stats Row */}
-                  <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-100">
-                    <div className="flex items-center gap-2">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <BookOpen className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <p className="text-lg font-bold text-gray-900">
-                          {scholar.lessonsCount}
-                        </p>
-                        <p className="text-gray-500 text-xs">درس مسجل</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star
-                          key={star}
-                          className="w-4 h-4 text-amber-400 fill-amber-400"
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Equipment Provided */}
-                  <div className="mb-6">
-                    <p className="text-sm text-gray-500 mb-3">
-                      التجهيزات المقدمة:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {["كاميرا", "ميكروفون", "إضاءة"].map((item, i) => (
-                        <span
-                          key={i}
-                          className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* YouTube Link */}
-                  <a
-                    href={scholar.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 bg-gradient-to-l from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 w-full"
-                  >
-                    <Youtube className="w-5 h-5" />
-                    شاهد الدروس على يوتيوب
-                  </a>
-                </div>
+              ))}
+              \n{" "}
+            </div>
+          ) : (
+            <div className="text-center py-16 animate-fadeInUp">
+              <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-12 h-12 text-emerald-600" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">قريباً</h3>
+              <p className="text-gray-600 text-lg max-w-md mx-auto">
+                سنشارك قريباً تفاصيل المشايخ والدعاة المدعومين
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -215,7 +228,8 @@ const ScholarsPage = () => {
               كيف نختار المشايخ؟
             </h2>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
-              نتبع معايير دقيقة لضمان وصول الدعم للمستحقين
+              نتبع معايير دقيقة لضمان وصول الدعم للمستحقين، ونعطي الأولوية
+              للمشايخ الأكثر نشاطاً في نشر الدروس
             </p>
           </div>
 
@@ -235,8 +249,8 @@ const ScholarsPage = () => {
               },
               {
                 step: "03",
-                title: "التفرغ للدعوة",
-                desc: "أن يكون متفرغاً لنشر العلم والدعوة",
+                title: "النشاط الدعوي",
+                desc: "أن يكون نشطاً في نشر الدروس والمحاضرات",
                 icon: GraduationCap,
               },
               {

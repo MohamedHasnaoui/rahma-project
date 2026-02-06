@@ -120,7 +120,7 @@ const NewsPage = () => {
                 >
                   {category}
                 </button>
-              )
+              ),
             )}
           </div>
         </div>
@@ -140,67 +140,79 @@ const NewsPage = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {news.map((item, index) => (
-              <article
-                key={item.id}
-                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          {news.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {news.map((item, index) => (
+                <article
+                  key={item.id}
+                  className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Image */}
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-                  {/* Date Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1.5 rounded-lg text-xs font-medium inline-flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {new Date(item.date).toLocaleDateString("ar-MA", {
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </div>
+                    {/* Date Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1.5 rounded-lg text-xs font-medium inline-flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        {new Date(item.date).toLocaleDateString("ar-MA", {
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </span>
+                    </div>
 
-                  {/* Category */}
-                  <div className="absolute bottom-4 right-4">
-                    <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                      مبادرات
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
-                    {item.summary}
-                  </p>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <button className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm transition group-hover:gap-3">
-                      اقرأ المزيد
-                      <ArrowLeft className="w-4 h-4" />
-                    </button>
-                    <div className="flex items-center gap-3 text-gray-400">
-                      <span className="flex items-center gap-1 text-xs">
-                        <Eye className="w-4 h-4" />
-                        120
+                    {/* Category */}
+                    <div className="absolute bottom-4 right-4">
+                      <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        مبادرات
                       </span>
                     </div>
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
+                      {item.summary}
+                    </p>
+
+                    {/* Footer */}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <button className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm transition group-hover:gap-3">
+                        اقرأ المزيد
+                        <ArrowLeft className="w-4 h-4" />
+                      </button>
+                      <div className="flex items-center gap-3 text-gray-400">
+                        <span className="flex items-center gap-1 text-xs">
+                          <Eye className="w-4 h-4" />
+                          120
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 animate-fadeInUp">
+              <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Newspaper className="w-12 h-12 text-emerald-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">قريباً</h3>
+              <p className="text-gray-600 text-lg max-w-md mx-auto">
+                سنشارك قريباً آخر الأخبار والمستجدات
+              </p>
+            </div>
+          )}
 
           {/* Load More */}
           <div className="text-center mt-12">

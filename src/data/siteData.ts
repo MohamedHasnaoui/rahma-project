@@ -41,10 +41,10 @@ export const donationInfo = {
 
 // إحصائيات الإنجازات
 export const stats = {
-  supportedScholars: 15,
-  citiesCovered: 8,
-  lessonsRecorded: 500,
-  beneficiaries: 50000,
+  supportedScholars: 0,
+  citiesCovered: 2,
+  lessonsRecorded: 0,
+  beneficiaries: 0,
 };
 
 // المبادرات
@@ -84,6 +84,15 @@ export const initiatives = [
         price: 300,
         quantity: 1,
       },
+
+      {
+        name: "ميكروفون مكتبي",
+        nameEn: "Desktop Microphone",
+        image:
+          "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
+        price: 200,
+        quantity: 1,
+      },
       {
         name: "قرص صلب خارجي",
         nameEn: "External Hard Drive",
@@ -93,7 +102,7 @@ export const initiatives = [
         quantity: 1,
       },
     ],
-    collectedAmount: 22300,
+    collectedAmount: 22500,
   },
   {
     id: 2,
@@ -257,157 +266,157 @@ export const initiatives = [
 
 // المشايخ المدعومون
 export const scholars = [
-  {
-    id: 1,
-    name: "الشيخ محمد الأمين",
-    city: "مكناس",
-    specialty: "العقيدة والفقه",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
-    youtube: "https://youtube.com",
-    lessonsCount: 120,
-  },
-  {
-    id: 2,
-    name: "الشيخ عبد الرحمن السعيد",
-    city: "الخميسات",
-    specialty: "التفسير والحديث",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
-    youtube: "https://youtube.com",
-    lessonsCount: 85,
-  },
-  {
-    id: 3,
-    name: "الشيخ يوسف البركاني",
-    city: "الصخيرات",
-    specialty: "الفقه المالكي",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
-    youtube: "https://youtube.com",
-    lessonsCount: 60,
-  },
-  {
-    id: 4,
-    name: "الشيخ أحمد الفاسي",
-    city: "فاس",
-    specialty: "علوم القرآن",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
-    youtube: "https://youtube.com",
-    lessonsCount: 95,
-  },
-  {
-    id: 5,
-    name: "الشيخ إبراهيم المكناسي",
-    city: "مكناس",
-    specialty: "السيرة النبوية",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
-    youtube: "https://youtube.com",
-    lessonsCount: 70,
-  },
+  // {
+  //   id: 1,
+  //   name: "الشيخ محمد الأمين",
+  //   city: "مكناس",
+  //   specialty: "العقيدة والفقه",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665- 5.jpg?w=2000",
+  //   youtube: "https://youtube.com",
+  //   lessonsCount: 120,
+  // },
+  // {
+  //   id: 2,
+  //   name: "الشيخ عبد الرحمن السعيد",
+  //   city: "الخميسات",
+  //   specialty: "التفسير والحديث",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+  //   youtube: "https://youtube.com",
+  //   lessonsCount: 85,
+  // },
+  // {
+  //   id: 3,
+  //   name: "الشيخ يوسف البركاني",
+  //   city: "الصخيرات",
+  //   specialty: "الفقه المالكي",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+  //   youtube: "https://youtube.com",
+  //   lessonsCount: 60,
+  // },
+  // {
+  //   id: 4,
+  //   name: "الشيخ أحمد الفاسي",
+  //   city: "فاس",
+  //   specialty: "علوم القرآن",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+  //   youtube: "https://youtube.com",
+  //   lessonsCount: 95,
+  // },
+  // {
+  //   id: 5,
+  //   name: "الشيخ إبراهيم المكناسي",
+  //   city: "مكناس",
+  //   specialty: "السيرة النبوية",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=2000",
+  //   youtube: "https://youtube.com",
+  //   lessonsCount: 70,
+  // },
 ];
 
 // الأخبار
 export const news = [
-  {
-    id: 1,
-    title: "إطلاق مبادرة جديدة في مدينة فاس",
-    date: "2026-01-05",
-    summary:
-      "تستعد جمعية الرحمة لإطلاق مبادرة جديدة لدعم الدعاة في مدينة فاس العريقة",
-    image:
-      "https://images.pexels.com/photos/2233416/pexels-photo-2233416.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "تفاصيل الخبر الكاملة...",
-  },
-  {
-    id: 2,
-    title: "اكتمال تجهيز 5 مشايخ في مكناس",
-    date: "2025-12-20",
-    summary:
-      "بفضل الله ثم بفضل تبرعاتكم، تم تجهيز 5 مشايخ في مدينة مكناس بالكامل",
-    image:
-      "https://images.pexels.com/photos/3753994/pexels-photo-3753994.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "تفاصيل الخبر الكاملة...",
-  },
-  {
-    id: 3,
-    title: "تقرير الشفافية السنوي 2025",
-    date: "2025-12-15",
-    summary: "نشر التقرير السنوي للشفافية والمحاسبة لعام 2025",
-    image:
-      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "تفاصيل الخبر الكاملة...",
-  },
+  // {
+  //   id: 1,
+  //   title: "إطلاق مبادرة جديدة في مدينة فاس",
+  //   date: "2026-01-05",
+  //   summary:
+  //     "تستعد جمعية الرحمة لإطلاق مبادرة جديدة لدعم الدعاة في مدينة فاس العريقة",
+  //   image:
+  //     "https://images.pexels.com/photos/2233416/pexels-photo-2233416.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   content: "تفاصيل الخبر الكاملة...",
+  // },
+  // {
+  //   id: 2,
+  //   title: "اكتمال تجهيز 5 مشايخ في مكناس",
+  //   date: "2025-12-20",
+  //   summary:
+  //     "بفضل الله ثم بفضل تبرعاتكم، تم تجهيز 5 مشايخ في مدينة مكناس بالكامل",
+  //   image:
+  //     "https://images.pexels.com/photos/3753994/pexels-photo-3753994.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   content: "تفاصيل الخبر الكاملة...",
+  // },
+  // {
+  //   id: 3,
+  //   title: "تقرير الشفافية السنوي 2025",
+  //   date: "2025-12-15",
+  //   summary: "نشر التقرير السنوي للشفافية والمحاسبة لعام 2025",
+  //   image:
+  //     "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   content: "تفاصيل الخبر الكاملة...",
+  // },
 ];
 
 // الدروس (مكتبة الدروس)
 export const lessons = [
-  {
-    id: 1,
-    title: "شرح كتاب التوحيد - الدرس الأول",
-    scholar: "الشيخ محمد الأمين",
-    category: "العقيدة",
-    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
-    duration: "45:30",
-    date: "2025-12-01",
-  },
-  {
-    id: 2,
-    title: "تفسير سورة الفاتحة",
-    scholar: "الشيخ عبد الرحمن السعيد",
-    category: "التفسير",
-    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
-    duration: "60:00",
-    date: "2025-11-25",
-  },
-  {
-    id: 3,
-    title: "أحكام الصلاة في المذهب المالكي",
-    scholar: "الشيخ يوسف البركاني",
-    category: "الفقه",
-    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
-    duration: "55:20",
-    date: "2025-11-20",
-  },
-  {
-    id: 4,
-    title: "السيرة النبوية - المرحلة المكية",
-    scholar: "الشيخ إبراهيم المكناسي",
-    category: "السيرة",
-    youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
-    duration: "70:00",
-    date: "2025-11-15",
-  },
+  // {
+  //   id: 1,
+  //   title: "شرح كتاب التوحيد - الدرس الأول",
+  //   scholar: "الشيخ محمد الأمين",
+  //   category: "العقيدة",
+  //   youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
+  //   duration: "45:30",
+  //   date: "2025-12-01",
+  // },
+  // {
+  //   id: 2,
+  //   title: "تفسير سورة الفاتحة",
+  //   scholar: "الشيخ عبد الرحمن السعيد",
+  //   category: "التفسير",
+  //   youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
+  //   duration: "60:00",
+  //   date: "2025-11-25",
+  // },
+  // {
+  //   id: 3,
+  //   title: "أحكام الصلاة في المذهب المالكي",
+  //   scholar: "الشيخ يوسف البركاني",
+  //   category: "الفقه",
+  //   youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
+  //   duration: "55:20",
+  //   date: "2025-11-20",
+  // },
+  // {
+  //   id: 4,
+  //   title: "السيرة النبوية - المرحلة المكية",
+  //   scholar: "الشيخ إبراهيم المكناسي",
+  //   category: "السيرة",
+  //   youtubeUrl: "https://www.youtube.com/embed/RXSOtxpmn10",
+  //   duration: "70:00",
+  //   date: "2025-11-15",
+  // },
 ];
 
 // الشهادات والتزكيات
 export const testimonials = [
-  {
-    id: 1,
-    name: "الشيخ محمد الأمين",
-    role: "داعية مدعوم",
-    text: "بفضل الله ثم بفضل جمعية الرحمة، أصبح بإمكاني نشر دروسي لآلاف المسلمين عبر الإنترنت. جزاهم الله خيراً على هذا العمل المبارك.",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
-  },
-  {
-    id: 2,
-    name: "أحمد المتبرع",
-    role: "متبرع منتظم",
-    text: "أشعر بالفخر لمساهمتي في هذا المشروع العظيم. الشفافية والأمانة التي تتمتع بها الجمعية تجعلني أثق في وصول تبرعاتي.",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
-  },
-  {
-    id: 3,
-    name: "فاطمة الزهراء",
-    role: "مستفيدة",
-    text: "استفدت كثيراً من الدروس المنشورة. أصبح العلم الشرعي متاحاً للجميع بفضل هذه الجهود المباركة.",
-    image:
-      "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
-  },
+  // {
+  //   id: 1,
+  //   name: "الشيخ محمد الأمين",
+  //   role: "داعية مدعوم",
+  //   text: "بفضل الله ثم بفضل جمعية الرحمة، أصبح بإمكاني نشر دروسي لآلاف المسلمين عبر الإنترنت. جزاهم الله خيراً على هذا العمل المبارك.",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
+  // },
+  // {
+  //   id: 2,
+  //   name: "أحمد المتبرع",
+  //   role: "متبرع منتظم",
+  //   text: "أشعر بالفخر لمساهمتي في هذا المشروع العظيم. الشفافية والأمانة التي تتمتع بها الجمعية تجعلني أثق في وصول تبرعاتي.",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
+  // },
+  // {
+  //   id: 3,
+  //   name: "فاطمة الزهراء",
+  //   role: "مستفيدة",
+  //   text: "استفدت كثيراً من الدروس المنشورة. أصبح العلم الشرعي متاحاً للجميع بفضل هذه الجهود المباركة.",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/islamic-wisdom-scholars-manuscripts-sacred-library_945665-245.jpg?w=200",
+  // },
 ];
 
 // الأسئلة الشائعة
@@ -439,8 +448,7 @@ export const faqItems = [
   {
     id: 5,
     question: "ما هي المدن التي تغطيها الجمعية؟",
-    answer:
-      "حالياً نغطي: مكناس، الخميسات، الصخيرات، وقريباً فاس. هدفنا تغطية جميع مدن المغرب.",
+    answer: "حالياً نغطي: الخميسات و الصخيرات. هدفنا تغطية جميع مدن المغرب.",
   },
   {
     id: 6,
@@ -456,64 +464,64 @@ export const palestineCampaign = {
   subtitle: "لن ننساكم يا غزة",
   description:
     "حملة إنسانية لدعم إخواننا في فلسطين وغزة المحاصرة. ساهم معنا في تخفيف معاناتهم.",
-  goalAmount: 500000,
-  currentAmount: 320000,
+  goalAmount: 20000,
+  currentAmount: 0,
   image:
     "https://wallpapercave.com/wp/wp2875215.jpg?auto=compress&cs=tinysrgb&w=800",
   updates: [
-    "تم إرسال الدفعة الأولى من المساعدات",
-    "التنسيق مع الجمعيات الشريكة في غزة",
-    "استمرار جمع التبرعات",
+    // "تم إرسال الدفعة الأولى من المساعدات",
+    // "التنسيق مع الجمعيات الشريكة في غزة",
+    // "استمرار جمع التبرعات",
   ],
 };
 
 // التقارير المالية
 export const financialReports = [
-  {
-    id: 1,
-    year: 2025,
-    quarter: "الربع الرابع",
-    totalDonations: 450000,
-    totalExpenses: 420000,
-    beneficiaries: 12,
-    downloadUrl: "#",
-  },
-  {
-    id: 2,
-    year: 2025,
-    quarter: "الربع الثالث",
-    totalDonations: 380000,
-    totalExpenses: 350000,
-    beneficiaries: 10,
-    downloadUrl: "#",
-  },
-  {
-    id: 3,
-    year: 2025,
-    quarter: "الربع الثاني",
-    totalDonations: 320000,
-    totalExpenses: 300000,
-    beneficiaries: 8,
-    downloadUrl: "#",
-  },
+  // {
+  //   id: 1,
+  //   year: 2025,
+  //   quarter: "الربع الرابع",
+  //   totalDonations: 450000,
+  //   totalExpenses: 420000,
+  //   beneficiaries: 12,
+  //   downloadUrl: "#",
+  // },
+  // {
+  //   id: 2,
+  //   year: 2025,
+  //   quarter: "الربع الثالث",
+  //   totalDonations: 380000,
+  //   totalExpenses: 350000,
+  //   beneficiaries: 10,
+  //   downloadUrl: "#",
+  // },
+  // {
+  //   id: 3,
+  //   year: 2025,
+  //   quarter: "الربع الثاني",
+  //   totalDonations: 320000,
+  //   totalExpenses: 300000,
+  //   beneficiaries: 8,
+  //   downloadUrl: "#",
+  // },
 ];
 
 // المدن المدعومة (للخريطة)
 export const supportedCities = [
-  {
-    id: 1,
-    name: "مكناس",
-    lat: 33.8935,
-    lng: -5.5473,
-    scholars: 5,
-    status: "active",
-  },
+  // {
+  //   id: 1,
+  //   name: "مكناس",
+  //   lat: 33.8935,
+  //   lng: -5.5473,
+  //   scholars: 5,
+  //   status: "active",
+  // },
   {
     id: 2,
     name: "الخميسات",
     lat: 33.8167,
     lng: -6.0667,
-    scholars: 3,
+    scholars: 1,
     status: "active",
   },
   {
@@ -521,49 +529,49 @@ export const supportedCities = [
     name: "الصخيرات",
     lat: 33.85,
     lng: -7.1167,
-    scholars: 2,
+    scholars: 1,
     status: "active",
   },
-  {
-    id: 4,
-    name: "فاس",
-    lat: 34.0331,
-    lng: -5.0003,
-    scholars: 0,
-    status: "upcoming",
-  },
-  {
-    id: 5,
-    name: "الرباط",
-    lat: 34.0209,
-    lng: -6.8416,
-    scholars: 0,
-    status: "upcoming",
-  },
-  {
-    id: 6,
-    name: "الدار البيضاء",
-    lat: 33.5731,
-    lng: -7.5898,
-    scholars: 0,
-    status: "planned",
-  },
-  {
-    id: 7,
-    name: "مراكش",
-    lat: 31.6295,
-    lng: -7.9811,
-    scholars: 0,
-    status: "planned",
-  },
-  {
-    id: 8,
-    name: "طنجة",
-    lat: 35.7595,
-    lng: -5.834,
-    scholars: 0,
-    status: "planned",
-  },
+  // {
+  //   id: 4,
+  //   name: "فاس",
+  //   lat: 34.0331,
+  //   lng: -5.0003,
+  //   scholars: 0,
+  //   status: "upcoming",
+  // },
+  // {
+  //   id: 5,
+  //   name: "الرباط",
+  //   lat: 34.0209,
+  //   lng: -6.8416,
+  //   scholars: 0,
+  //   status: "upcoming",
+  // },
+  // {
+  //   id: 6,
+  //   name: "الدار البيضاء",
+  //   lat: 33.5731,
+  //   lng: -7.5898,
+  //   scholars: 0,
+  //   status: "planned",
+  // },
+  // {
+  //   id: 7,
+  //   name: "مراكش",
+  //   lat: 31.6295,
+  //   lng: -7.9811,
+  //   scholars: 0,
+  //   status: "planned",
+  // },
+  // {
+  //   id: 8,
+  //   name: "طنجة",
+  //   lat: 35.7595,
+  //   lng: -5.834,
+  //   scholars: 0,
+  //   status: "planned",
+  // },
 ];
 
 // كتالوج الأجهزة والمعدات
@@ -660,15 +668,15 @@ export const equipmentCatalog = [
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.45_1_mnimjv.png",
     description: "لتخزين الفيديوهات",
   },
-  // {
-  //   id: 11,
-  //   name: "ميكروفون مكتبي",
-  //   nameEn: "Desktop Microphone",
-  //   price: 200,
-  //   image:
-  //     "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
-  //   description: "للتسجيل الصوتي",
-  // },
+  {
+    id: 11,
+    name: "ميكروفون مكتبي",
+    nameEn: "Desktop Microphone",
+    price: 200,
+    image:
+      "https://res.cloudinary.com/dkusmaiyc/image/upload/w_250,h_250,c_pad/v1770237900/WhatsApp_Image_2026-02-04_at_21.41.43_axbi7n.png",
+    description: "للتسجيل الصوتي",
+  },
   {
     id: 12,
     name: "كاميرا Sony 4K احترافية",

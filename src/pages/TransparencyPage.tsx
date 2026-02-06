@@ -170,79 +170,93 @@ const TransparencyPage = () => {
             </p>
           </div>
 
-          <div className="space-y-6 animate-fadeInUp delay-200">
-            {financialReports.map((report, index) => (
-              <div
-                key={report.id}
-                className="bg-gradient-to-l from-gray-50 to-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 hover-lift"
-              >
-                <div className="p-6 md:p-8">
-                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                    {/* Report Title */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <BarChart3 className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">
-                          تقرير {report.quarter} - {report.year}
-                        </h3>
-                        <div className="flex items-center gap-2 text-gray-500 text-sm mt-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>نُشر في {report.year}</span>
+          {financialReports.length > 0 ? (
+            <div className="space-y-6 animate-fadeInUp delay-200">
+              {financialReports.map((report, index) => (
+                <div
+                  key={report.id}
+                  className="bg-gradient-to-l from-gray-50 to-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 hover-lift"
+                >
+                  <div className="p-6 md:p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                      {/* Report Title */}
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                          <BarChart3 className="w-8 h-8 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">
+                            تقرير {report.quarter} - {report.year}
+                          </h3>
+                          <div className="flex items-center gap-2 text-gray-500 text-sm mt-1">
+                            <Calendar className="w-4 h-4" />
+                            <span>نُشر في {report.year}</span>
+                          </div>
                         </div>
                       </div>
+
+                      {/* Stats */}
+                      <div className="flex flex-wrap gap-4">
+                        <div className="flex items-center gap-3 bg-emerald-50 px-5 py-3 rounded-xl border border-emerald-100">
+                          <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
+                            <TrendingUp className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-gray-500">التبرعات</p>
+                            <p className="font-bold text-emerald-700">
+                              {report.totalDonations.toLocaleString("ar-MA")}{" "}
+                              درهم
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-3 bg-blue-50 px-5 py-3 rounded-xl border border-blue-100">
+                          <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <Wallet className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-gray-500">المصروفات</p>
+                            <p className="font-bold text-blue-700">
+                              {report.totalExpenses.toLocaleString("ar-MA")}{" "}
+                              درهم
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-3 bg-amber-50 px-5 py-3 rounded-xl border border-amber-100">
+                          <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
+                            <Users className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-gray-500">المستفيدون</p>
+                            <p className="font-bold text-amber-700">
+                              {report.beneficiaries} شيخ
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Download Button */}
+                      <button className="flex items-center justify-center gap-2 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/30">
+                        <Download className="w-5 h-5" />
+                        تحميل PDF
+                      </button>
                     </div>
-
-                    {/* Stats */}
-                    <div className="flex flex-wrap gap-4">
-                      <div className="flex items-center gap-3 bg-emerald-50 px-5 py-3 rounded-xl border border-emerald-100">
-                        <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
-                          <TrendingUp className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <p className="text-xs text-gray-500">التبرعات</p>
-                          <p className="font-bold text-emerald-700">
-                            {report.totalDonations.toLocaleString("ar-MA")} درهم
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-3 bg-blue-50 px-5 py-3 rounded-xl border border-blue-100">
-                        <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                          <Wallet className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <p className="text-xs text-gray-500">المصروفات</p>
-                          <p className="font-bold text-blue-700">
-                            {report.totalExpenses.toLocaleString("ar-MA")} درهم
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-3 bg-amber-50 px-5 py-3 rounded-xl border border-amber-100">
-                        <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
-                          <Users className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <p className="text-xs text-gray-500">المستفيدون</p>
-                          <p className="font-bold text-amber-700">
-                            {report.beneficiaries} شيخ
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Download Button */}
-                    <button className="flex items-center justify-center gap-2 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/30">
-                      <Download className="w-5 h-5" />
-                      تحميل PDF
-                    </button>
                   </div>
                 </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 animate-fadeInUp delay-200">
+              <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FileText className="w-12 h-12 text-emerald-600" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">قريباً</h3>
+              <p className="text-gray-600 text-lg max-w-md mx-auto">
+                سنشارك قريباً التقارير المالية المفصلة
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

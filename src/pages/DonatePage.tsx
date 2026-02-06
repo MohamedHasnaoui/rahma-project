@@ -29,14 +29,10 @@ const DonatePage = () => {
     setTimeout(() => setCopied(null), 2000);
   };
 
-  const goalAmount = 1500000;
-  const currentAmount = 850000;
-  const progressPercentage = (currentAmount / goalAmount) * 100;
-
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[30vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950"></div>
           <div className="absolute inset-0 bg-[url('https://muharaq.org/wp-content/uploads/2025/02/%D8%B5%D8%AF%D9%82%D8%A9-%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
@@ -55,38 +51,6 @@ const DonatePage = () => {
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed mb-8 animate-fadeInUp delay-200">
             درهمك اليوم قد يكون سبباً في هداية آلاف الناس غداً
           </p>
-
-          {/* Progress Bar in Hero */}
-          <div className="max-w-xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp delay-300">
-            <div className="flex justify-between items-center mb-3">
-              <span className="text-emerald-100 font-medium">
-                المبادرة الحالية: تجهيز دعاة فاس
-              </span>
-              <span className="text-2xl font-bold text-amber-400">
-                {progressPercentage.toFixed(0)}%
-              </span>
-            </div>
-            <div className="w-full bg-white/20 rounded-full h-4 overflow-hidden">
-              <div
-                className="bg-gradient-to-l from-amber-400 to-yellow-500 h-full rounded-full transition-all duration-1000"
-                style={{ width: `${progressPercentage}%` }}
-              ></div>
-            </div>
-            <div className="flex justify-between items-center mt-3 text-sm">
-              <span className="text-emerald-200">
-                تم جمع:{" "}
-                <span className="font-bold text-white">
-                  {currentAmount.toLocaleString("ar-MA")} درهم
-                </span>
-              </span>
-              <span className="text-emerald-200">
-                الهدف:{" "}
-                <span className="font-bold text-white">
-                  {goalAmount.toLocaleString("ar-MA")} درهم
-                </span>
-              </span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -120,7 +84,7 @@ const DonatePage = () => {
                 color: "amber",
               },
             ].map((item, index) => (
-              <div key={index} className="text-center group hover-lift">
+              <div key={index} className="text-center group">
                 <div
                   className={`w-16 h-16 bg-${item.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
                 >

@@ -56,8 +56,6 @@ const InitiativeDetailPage = () => {
     (initiative.collectedAmount / initiative.goalAmount) * 100;
   const remainingAmount = initiative.goalAmount - initiative.collectedAmount;
 
-
-
   const getStatusInfo = () => {
     switch (initiative.status) {
       case "مكتملة":
@@ -459,9 +457,6 @@ const InitiativeDetailPage = () => {
                     <Users className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                     <p className="text-gray-500">
                       سيتم تحديد المشايخ المستفيدين قريباً
-                    </p>
-                    <p className="text-gray-400 text-sm mt-2">
-                      المبادرة في مرحلة التخطيط
                     </p>
                   </div>
                 )}

@@ -226,7 +226,8 @@ const HomePage = () => {
               كيف نعمل؟
             </h2>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
-              نتبع منهجية واضحة لضمان وصول دعمكم للمستحقين
+              نتبع منهجية واضحة لضمان وصول دعمكم للمستحقين، ونعطي الأولوية
+              للمشايخ الأكثر نشاطاً في نشر العلم
             </p>
           </div>
 
@@ -366,173 +367,197 @@ const HomePage = () => {
           </div>
 
           {/* Carousel Container */}
-          <div className="relative animate-fadeInUp delay-200">
-            {/* Navigation Arrows */}
+          {ongoingInitiatives.length > 0 ? (
+            <div className="relative animate-fadeInUp delay-200">
+              {/* Navigation Arrows */}
 
-            {/* Slides */}
-            <div className="overflow-hidden rounded-[2.5rem]">
-              <div
-                className="flex transition-transform duration-700 ease-out"
-                style={{ transform: `translateX(${currentSlide * 100}%)` }}
-              >
-                {ongoingInitiatives.map((initiative) => {
-                  const progressPercentage =
-                    (initiative.collectedAmount / initiative.goalAmount) * 100;
+              {/* Slides */}
+              <div className="overflow-hidden rounded-[2.5rem]">
+                <div
+                  className="flex transition-transform duration-700 ease-out"
+                  style={{ transform: `translateX(${currentSlide * 100}%)` }}
+                >
+                  {ongoingInitiatives.map((initiative) => {
+                    const progressPercentage =
+                      (initiative.collectedAmount / initiative.goalAmount) *
+                      100;
 
-                  return (
-                    <div key={initiative.id} className="w-full flex-shrink-0">
-                      <div className="bg-gradient-to-br from-emerald-50 via-white to-amber-50 p-8 md:p-12 shadow-2xl border border-emerald-100 relative overflow-hidden">
-                        {/* Decorative */}
-                        <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-100/50 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                        <div className="absolute bottom-0 right-0 w-32 h-32 bg-amber-100/50 rounded-full translate-x-1/2 translate-y-1/2"></div>
+                    return (
+                      <div key={initiative.id} className="w-full flex-shrink-0">
+                        <div className="bg-gradient-to-br from-emerald-50 via-white to-amber-50 p-8 md:p-12 shadow-2xl border border-emerald-100 relative overflow-hidden">
+                          {/* Decorative */}
+                          <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-100/50 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                          <div className="absolute bottom-0 right-0 w-32 h-32 bg-amber-100/50 rounded-full translate-x-1/2 translate-y-1/2"></div>
 
-                        <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                          {/* Image */}
-                          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                            <img
-                              src={initiative.image}
-                              alt={initiative.name}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div className="absolute top-4 right-4">
-                              <span
-                                className={`px-3 py-1.5 rounded-full text-xs font-bold ${
-                                  initiative.status === "جارية"
-                                    ? "bg-blue-500 text-white"
-                                    : "bg-amber-500 text-white"
-                                }`}
-                              >
-                                {initiative.status}
-                              </span>
-                            </div>
-                            <div className="absolute bottom-4 right-4 left-4">
-                              <div className="flex items-center gap-2 text-white/90 text-sm">
-                                <MapPin className="w-4 h-4" />
-                                <span>{initiative.city}</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Content */}
-                          <div>
-                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                              {initiative.name}
-                            </h3>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
-                              {initiative.description}
-                            </p>
-
-                            {/* Progress Bar */}
-                            <div className="mb-6">
-                              <div className="flex justify-between items-center mb-3">
-                                <span className="text-gray-600 font-medium">
-                                  التقدم
-                                </span>
-                                <span className="text-2xl font-bold text-emerald-700">
-                                  {progressPercentage.toFixed(0)}%
-                                </span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
-                                <div
-                                  className="bg-gradient-to-l from-emerald-500 to-emerald-600 h-full rounded-full transition-all duration-1000 relative"
-                                  style={{ width: `${progressPercentage}%` }}
+                          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                            {/* Image */}
+                            <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+                              <img
+                                src={initiative.image}
+                                alt={initiative.name}
+                                className="w-full h-full object-cover"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                              <div className="absolute top-4 right-4">
+                                <span
+                                  className={`px-3 py-1.5 rounded-full text-xs font-bold ${
+                                    initiative.status === "جارية"
+                                      ? "bg-blue-500 text-white"
+                                      : "bg-amber-500 text-white"
+                                  }`}
                                 >
-                                  <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                  {initiative.status}
+                                </span>
+                              </div>
+                              <div className="absolute bottom-4 right-4 left-4">
+                                <div className="flex items-center gap-2 text-white/90 text-sm">
+                                  <MapPin className="w-4 h-4" />
+                                  <span>{initiative.city}</span>
                                 </div>
                               </div>
-                              <div className="flex justify-between items-center mt-3 text-sm">
-                                <span className="text-gray-500">
-                                  تم جمع:{" "}
-                                  <span className="font-bold text-emerald-600">
-                                    {initiative.collectedAmount.toLocaleString(
-                                      "ar-MA",
-                                    )}{" "}
-                                    درهم
-                                  </span>
-                                </span>
-                                <span className="text-gray-500">
-                                  الهدف:{" "}
-                                  <span className="font-bold text-gray-700">
-                                    {initiative.goalAmount.toLocaleString(
-                                      "ar-MA",
-                                    )}{" "}
-                                    درهم
-                                  </span>
-                                </span>
-                              </div>
                             </div>
 
-                            {/* Scholars Count */}
-                            <div className="flex items-center gap-4 mb-6 p-4 bg-white rounded-xl border border-gray-100">
-                              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                                <Users className="w-6 h-6 text-emerald-600" />
-                              </div>
-                              <div>
-                                <p className="text-xl font-bold text-gray-900">
-                                  {initiative.scholars}
-                                </p>
-                                <p className="text-sm text-gray-500">
-                                  مشايخ سيستفيدون
-                                </p>
-                              </div>
-                            </div>
+                            {/* Content */}
+                            <div>
+                              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                {initiative.name}
+                              </h3>
+                              <p className="text-gray-600 mb-6 leading-relaxed">
+                                {initiative.description}
+                              </p>
 
-                            {/* CTA */}
-                            <div className="flex flex-col lg:flex-row gap-3 w-full">
-                              {/* Details Button */}
-                              <Link
-                                to={`/initiatives/${initiative.id}`}
-                                className="w-full lg:w-auto justify-center inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-emerald-700 font-bold px-6 py-4 rounded-full text-lg border-2 border-emerald-600 transition-all duration-300 hover:scale-105 whitespace-nowrap"
-                              >
-                                التفاصيل
-                              </Link>
+                              {/* Progress Bar */}
+                              <div className="mb-6">
+                                <div className="flex justify-between items-center mb-3">
+                                  <span className="text-gray-600 font-medium">
+                                    التقدم
+                                  </span>
+                                  <span className="text-2xl font-bold text-emerald-700">
+                                    {progressPercentage.toFixed(0)}%
+                                  </span>
+                                </div>
+                                <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                  <div
+                                    className="bg-gradient-to-l from-emerald-500 to-emerald-600 h-full rounded-full transition-all duration-1000 relative"
+                                    style={{ width: `${progressPercentage}%` }}
+                                  >
+                                    <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center mt-3 text-sm">
+                                  <span className="text-gray-500">
+                                    تم جمع:{" "}
+                                    <span className="font-bold text-emerald-600">
+                                      {initiative.collectedAmount.toLocaleString(
+                                        "ar-MA",
+                                      )}{" "}
+                                      درهم
+                                    </span>
+                                  </span>
+                                  <span className="text-gray-500">
+                                    الهدف:{" "}
+                                    <span className="font-bold text-gray-700">
+                                      {initiative.goalAmount.toLocaleString(
+                                        "ar-MA",
+                                      )}{" "}
+                                      درهم
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
 
-                              {/* Contribute Button */}
-                              <Link
-                                to="/donate"
-                                className="w-full lg:flex-1 justify-center inline-flex items-center gap-3 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-emerald-500/25 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 whitespace-nowrap"
-                              >
-                                <HandHeart className="w-6 h-6 flex-shrink-0" />
-                                ساهم في المبادرة
-                              </Link>
+                              {/* Scholars Count */}
+                              <div className="flex items-center gap-4 mb-6 p-4 bg-white rounded-xl border border-gray-100">
+                                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                  <Users className="w-6 h-6 text-emerald-600" />
+                                </div>
+                                <div>
+                                  <p className="text-xl font-bold text-gray-900">
+                                    {initiative.scholars}
+                                  </p>
+                                  <p className="text-sm text-gray-500">
+                                    مشايخ سيستفيدون
+                                  </p>
+                                </div>
+                              </div>
+
+                              {/* CTA */}
+                              <div className="flex flex-col lg:flex-row gap-3 w-full">
+                                {/* Details Button */}
+                                <Link
+                                  to={`/initiatives/${initiative.id}`}
+                                  className="w-full lg:w-auto justify-center inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-emerald-700 font-bold px-6 py-4 rounded-full text-lg border-2 border-emerald-600 transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                                >
+                                  التفاصيل
+                                </Link>
+
+                                {/* Contribute Button */}
+                                <Link
+                                  to="/donate"
+                                  className="w-full lg:flex-1 justify-center inline-flex items-center gap-3 bg-gradient-to-l from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-emerald-500/25 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 whitespace-nowrap"
+                                >
+                                  <HandHeart className="w-6 h-6 flex-shrink-0" />
+                                  ساهم في المبادرة
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center gap-3 mt-8">
+                {ongoingInitiatives.map((initiative, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    aria-label={`الانتقال إلى ${initiative.name}`}
+                    className={`transition-all duration-300 rounded-full ${
+                      currentSlide === index
+                        ? "w-10 h-3 bg-emerald-600"
+                        : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-3 mt-8">
-              {ongoingInitiatives.map((initiative, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`الانتقال إلى ${initiative.name}`}
-                  className={`transition-all duration-300 rounded-full ${
-                    currentSlide === index
-                      ? "w-10 h-3 bg-emerald-600"
-                      : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
-              ))}
+          ) : (
+            <div className="text-center py-16 animate-fadeInUp delay-200">
+              <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-12 h-12 text-amber-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                لا توجد مبادرات جارية حالياً
+              </h3>
+              <p className="text-gray-600 text-lg max-w-md mx-auto mb-8">
+                سنشارك أي مستجدات قريباً بإذن الله
+              </p>
+              <Link
+                to="/initiatives"
+                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-full transition-all"
+              >
+                تصفح جميع المبادرات
+                <ArrowLeft className="w-5 h-5" />
+              </Link>
             </div>
-          </div>
+          )}
 
           {/* View All Link */}
-          <div className="text-center mt-8">
-            <Link
-              to="/initiatives"
-              className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium group"
-            >
-              عرض جميع المبادرات
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            </Link>
-          </div>
+          {ongoingInitiatives.length > 0 && (
+            <div className="text-center mt-8">
+              <Link
+                to="/initiatives"
+                className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium group"
+              >
+                عرض جميع المبادرات
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
