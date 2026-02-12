@@ -54,7 +54,7 @@ export const initiatives = [
     name: "مبادرة الخميسات",
     city: "الخميسات",
     description:
-      "تجهيز المساجد والدعاة بمدينة الخميسات بالأدوات اللازمة لتسجيل ونشر الدروس",
+      "تجهيز الدعاة بمدينة الخميسات بالأدوات اللازمة لتسجيل ونشر الدروس",
     status: "مكتملة",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770315539/Khemisset_yaajht.jpg",
@@ -112,7 +112,7 @@ export const initiatives = [
     status: "مكتملة",
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770315691/skhirate_ypznj1.jpg",
-    scholars: 2,
+    scholars: 1,
     equipment: [
       {
         name: "كاميرا Sony Alpha رقمية",
@@ -239,7 +239,7 @@ export const initiatives = [
   //   id: 6,
   //   name: "مبادرة طنجة",
   //   city: "طنجة",
-  //   description: "تجهيز المساجد والدعاة بمدينة طنجة بالأدوات اللازمة للتصوير",
+  //   description: "تجهيز والدعاة بمدينة طنجة بالأدوات اللازمة للتصوير",
   //   status: "قريباً",
   //   image:
   //     "https://res.cloudinary.com/dkusmaiyc/image/upload/v1770316085/tanger_rphg33.jpg",

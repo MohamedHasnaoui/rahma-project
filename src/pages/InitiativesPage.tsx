@@ -120,11 +120,11 @@ const InitiativesPage = () => {
               return (
                 <div
                   key={initiative.id}
-                  className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp"
+                  className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover-lift animate-fadeInUp flex flex-col"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Image */}
-                  <div className="relative h-52 overflow-hidden">
+                  <div className="relative h-52 overflow-hidden flex-shrink-0">
                     <img
                       src={initiative.image}
                       alt={initiative.name}
@@ -169,13 +169,13 @@ const InitiativesPage = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-5">
-                    <p className="text-gray-600 mb-5 leading-relaxed text-sm line-clamp-2">
+                  <div className="p-5 flex flex-col flex-grow">
+                    <p className="text-gray-600 mb-5 leading-relaxed text-sm min-h-[2.5rem]">
                       {initiative.description}
                     </p>
 
                     {/* Donation Progress */}
-                    <div className="mb-4">
+                    <div className="mb-4 mt-auto">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-xs text-gray-500">التقدم</span>
                         <span
