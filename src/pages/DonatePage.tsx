@@ -109,7 +109,7 @@ const DonatePage = () => {
               معلومات التحويل البنكي
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              يمكنك التبرع عبر التحويل البنكي المباشر لحساب الجمعية
+              يمكنك التبرع عبر التحويل البنكي المباشر لحساب المشروع
             </p>
           </div>
 
@@ -120,10 +120,10 @@ const DonatePage = () => {
                 <Building2 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white">
-                الحساب البنكي للجمعية
+                الحساب البنكي للمشروع
               </h3>
               <p className="text-emerald-100 mt-2">
-                جميع التبرعات تذهب مباشرة لدعم المشايخ
+                جميع التبرعات تذهب مباشرة لتوفير التجهيزات
               </p>
             </div>
 
@@ -334,7 +334,7 @@ const DonatePage = () => {
             {[
               {
                 amount: "500",
-                desc: "ميكروفون احترافي لشيخ واحد",
+                desc: "ميكروفون احترافي لداعية واحد",
                 icon: HandHeart,
               },
               {
@@ -342,7 +342,7 @@ const DonatePage = () => {
                 desc: "كاميرا كاملة مع ملحقاتها",
                 icon: TrendingUp,
               },
-              { amount: "5000", desc: "تجهيز كامل لشيخ واحد", icon: Star },
+              { amount: "5000", desc: "تجهيز كامل لداعية واحد", icon: Star },
             ].map((item, index) => (
               <div
                 key={index}

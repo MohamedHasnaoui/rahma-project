@@ -44,7 +44,6 @@ const Header = () => {
     { name: "الرئيسية", path: "/" },
     { name: "من نحن", path: "/about" },
     { name: "مبادراتنا", path: "/initiatives" },
-    { name: "المشايخ", path: "/scholars" },
     { name: "الأجهزة", path: "/equipment" },
   ];
 
@@ -52,7 +51,6 @@ const Header = () => {
     label: "المزيد",
     items: [
       { name: "الأخبار", path: "/news", icon: Newspaper },
-      { name: "مكتبة الدروس", path: "/lessons", icon: BookOpen },
       { name: "شهادات وتزكيات", path: "/testimonials", icon: MessageCircle },
       { name: "أسئلة شائعة", path: "/faq", icon: HelpCircle },
       { name: "الشفافية", path: "/transparency", icon: Shield },
@@ -177,15 +175,15 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3">
           <div className="text-right">
             <h1 className="text-lg sm:text-xl font-bold text-emerald-800">
-              جمعية الرحمة
+              تجهيز الدعاة
             </h1>
             <p className="text-xs sm:text-sm text-emerald-600 hidden sm:block">
-              للتربية والتنمية والأعمال الاجتماعية
+              صدقة جارية في نشر العلم
             </p>
           </div>
           <img
             src={logo}
-            alt="شعار جمعية الرحمة"
+            alt="شعار تجهيز الدعاة"
             className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
           />
         </Link>

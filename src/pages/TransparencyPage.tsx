@@ -77,7 +77,7 @@ const TransparencyPage = () => {
                 color: "blue",
               },
               {
-                label: "المشايخ المدعومون",
+                label: "المستفيدون",
                 value: totalBeneficiaries,
                 icon: Users,
                 color: "amber",
@@ -230,7 +230,7 @@ const TransparencyPage = () => {
                           <div>
                             <p className="text-xs text-gray-500">المستفيدون</p>
                             <p className="font-bold text-amber-700">
-                              {report.beneficiaries} شيخ
+                              {report.beneficiaries} مستفيد
                             </p>
                           </div>
                         </div>
@@ -283,7 +283,7 @@ const TransparencyPage = () => {
             {[
               {
                 percent: "85%",
-                label: "تجهيزات المشايخ",
+                label: "تجهيزات الدعاة",
                 desc: "كاميرات ومعدات تصوير",
                 icon: Award,
               },
@@ -296,7 +296,7 @@ const TransparencyPage = () => {
               {
                 percent: "5%",
                 label: "النقل والتوصيل",
-                desc: "إيصال المعدات للمشايخ",
+                desc: "إيصال المعدات للدعاة",
                 icon: TrendingUp,
               },
               {

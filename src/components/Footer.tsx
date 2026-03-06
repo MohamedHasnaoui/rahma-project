@@ -14,15 +14,13 @@ const Footer = () => {
   const quickLinks = [
     { name: "من نحن", path: "/about" },
     { name: "مبادراتنا", path: "/initiatives" },
-    { name: "المشايخ المدعومون", path: "/scholars" },
     { name: "ساهم معنا", path: "/donate" },
     { name: "الشفافية والتقارير", path: "/transparency" },
     { name: "تواصل معنا", path: "/contact" },
   ];
 
   const otherLinks = [
-    { name: "مكتبة الدروس", path: "/lessons" },
-    { name: "أخبار الجمعية", path: "/news" },
+    { name: "آخر الأخبار", path: "/news" },
     { name: "شهادات وتزكيات", path: "/testimonials" },
     { name: "أسئلة شائعة", path: "/faq" },
     { name: "حملة فلسطين", path: "/palestine" },
@@ -38,7 +36,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={logo}
-                alt="شعار جمعية الرحمة"
+                alt="شعار تجهيز الدعاة"
                 className="w-16 h-16 object-contain"
               />
               <div className="text-right">

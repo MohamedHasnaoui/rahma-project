@@ -22,7 +22,7 @@ const EquipmentPage = () => {
             الأجهزة والمعدات
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-200">
-            تعرف على ما نحتاجه لدعم المشايخ في نشر العلم الشرعي الصحيح
+            تعرف على ما نحتاجه لدعم الدعاة في نشر العلم الشرعي الصحيح
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ const EquipmentPage = () => {
               قائمة الأجهزة
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-6">
-              نوفر للمشايخ جميع الأدوات اللازمة لتسجيل ونشر دروسهم بجودة عالية.
+              نوفر للدعاة جميع الأدوات اللازمة لتسجيل ونشر دروسهم بجودة عالية.
               يمكنك المساهمة بالتبرع المالي أو شراء وتبرع الأجهزة مباشرة.
             </p>
             {/* Price Disclaimer */}

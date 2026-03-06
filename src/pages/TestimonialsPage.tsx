@@ -34,7 +34,7 @@ const TestimonialsPage = () => {
             شهادات وتزكيات
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-200">
-            كلمات صادقة من المشايخ المدعومين والمستفيدين من خدماتنا
+            كلمات صادقة من المستفيدين والمتبرعين
           </p>
         </div>
       </section>
@@ -45,8 +45,8 @@ const TestimonialsPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               {
-                label: "شيخ مدعوم",
-                value: stats.supportedScholars,
+                label: "مبادرة مكتملة",
+                value: stats.initiativesCompleted,
                 icon: GraduationCap,
                 color: "emerald",
               },
@@ -83,7 +83,7 @@ const TestimonialsPage = () => {
               ماذا قالوا عنا؟
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              شهادات حقيقية من المشايخ والمستفيدين الذين تعاملوا معنا
+              شهادات حقيقية من المستفيدين الذين تعاملوا معنا
             </p>
           </div>
 
@@ -147,7 +147,7 @@ const TestimonialsPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">قريباً</h3>
               <p className="text-gray-600 text-lg max-w-md mx-auto">
-                سنشارك قريباً شهادات المستفيدين والمشايخ
+                سنشارك قريباً شهادات المستفيدين والمتبرعين
               </p>
             </div>
           )}
@@ -166,15 +166,15 @@ const TestimonialsPage = () => {
           <div className="grid md:grid-cols-3 gap-6 animate-fadeInUp delay-200">
             {[
               {
-                title: "المشايخ المدعومون",
-                desc: "شهادات من العلماء الذين حصلوا على الدعم",
+                title: "الدعاة المستفيدون",
+                desc: "شهادات من الدعاة الذين حصلوا على الدعم",
                 icon: GraduationCap,
                 count: 0,
                 color: "emerald",
               },
               {
                 title: "المتبرعون",
-                desc: "آراء المتبرعين حول شفافية الجمعية",
+                desc: "آراء المتبرعين حول شفافية المشروع",
                 icon: Heart,
                 count: 0,
                 color: "red",
@@ -258,10 +258,10 @@ const TestimonialsPage = () => {
               ساهم الآن
             </Link>
             <Link
-              to="/scholars"
+              to="/donate"
               className="bg-white hover:bg-gray-50 text-emerald-800 font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2 hover-lift"
             >
-              تعرف على المشايخ
+              ساهم معنا
               <ArrowLeft className="w-5 h-5" />
             </Link>
           </div>

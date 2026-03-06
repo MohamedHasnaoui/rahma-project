@@ -37,7 +37,7 @@ const AboutPage = () => {
             من نحن
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-200">
-            جمعية خيرية مغربية تسعى لنشر العلم الشرعي الصحيح في جميع أنحاء
+            مبادرة خيرية مغربية تسعى لنشر العلم الشرعي الصحيح في جميع أنحاء
             المملكة
           </p>
         </div>
@@ -53,10 +53,11 @@ const AboutPage = () => {
                 قصتنا
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                تعريف بـ<span className="text-emerald-600">جمعية الرحمة</span>
+                تعريف بـ
+                <span className="text-emerald-600">مشروع تجهيز الدعاة</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                {associationInfo.fullName} هي جمعية خيرية مغربية تأسست عام{" "}
+                {associationInfo.fullName} هي مبادرة خيرية مغربية انطلقت عام{" "}
                 {associationInfo.foundedYear}، تهدف إلى نشر العلم الشرعي الصحيح
                 في جميع أنحاء المغرب.
               </p>
@@ -70,9 +71,9 @@ const AboutPage = () => {
                 <div className="bg-emerald-50 rounded-2xl p-4 text-center">
                   <Users className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
                   <p className="text-2xl font-bold text-emerald-800">
-                    {stats.supportedScholars}+
+                    {stats.initiativesCompleted}+
                   </p>
-                  <p className="text-gray-600 text-sm">شيخ مدعوم</p>
+                  <p className="text-gray-600 text-sm">مبادرة مكتملة</p>
                 </div>
                 <div className="bg-amber-50 rounded-2xl p-4 text-center">
                   <MapPin className="w-8 h-8 text-amber-600 mx-auto mb-2" />
@@ -89,7 +90,7 @@ const AboutPage = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-amber-200 rounded-3xl transform rotate-3"></div>
               <img
                 src="https://images.pexels.com/photos/3753994/pexels-photo-3753994.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="جمعية الرحمة"
+                alt="تجهيز الدعاة"
                 className="relative rounded-3xl shadow-2xl w-full h-[400px] object-cover"
               />
               {/* Floating Card */}
@@ -194,7 +195,7 @@ const AboutPage = () => {
             {[
               {
                 title: "تجهيز الدعاة",
-                desc: "نوفر أدوات التصوير والبث للدعاة والمشايخ في مختلف المدن المغربية",
+                desc: "نوفر أدوات التصوير والبث للدعاة في مختلف المدن المغربية",
                 icon: Camera,
               },
               {
@@ -315,8 +316,8 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   {
-                    value: stats.supportedScholars,
-                    label: "شيخ مدعوم",
+                    value: stats.initiativesCompleted,
+                    label: "مبادرة مكتملة",
                     icon: Users,
                   },
                   {
@@ -325,8 +326,8 @@ const AboutPage = () => {
                     icon: MapPin,
                   },
                   {
-                    value: `${stats.lessonsRecorded}+`,
-                    label: "درس منشور",
+                    value: `${stats.initiativesCompleted}+`,
+                    label: "مبادرة منجزة",
                     icon: BookOpen,
                   },
                   {

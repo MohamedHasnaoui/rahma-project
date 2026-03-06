@@ -25,7 +25,7 @@ const FaqPage = () => {
   const categories = [
     { id: "all", label: "الكل", icon: HelpCircle },
     { id: "donation", label: "التبرع", icon: Heart },
-    { id: "scholars", label: "المشايخ", icon: BookOpen },
+    { id: "scholars", label: "المستفيدون", icon: BookOpen },
     { id: "transparency", label: "الشفافية", icon: Shield },
   ];
 
@@ -57,7 +57,7 @@ const FaqPage = () => {
             الأسئلة الشائعة
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed mb-8 animate-fadeInUp delay-200">
-            إجابات واضحة وشفافة عن كل ما يخص الجمعية وخدماتها
+            إجابات واضحة وشفافة عن كل ما يخص المشروع وخدماته
           </p>
 
           {/* Search Box */}
@@ -264,10 +264,10 @@ const FaqPage = () => {
                 color: "emerald",
               },
               {
-                title: "المشايخ المدعومون",
-                desc: "تعرف على العلماء المستفيدين",
+                title: "المبادرات",
+                desc: "تعرف على مبادراتنا والمستفيدين",
                 icon: Users,
-                link: "/scholars",
+                link: "/initiatives",
                 color: "blue",
               },
               {
@@ -279,7 +279,7 @@ const FaqPage = () => {
               },
               {
                 title: "من نحن",
-                desc: "تعرف على الجمعية ورسالتها",
+                desc: "تعرف على المشروع ورسالته",
                 icon: BookOpen,
                 link: "/about",
                 color: "purple",

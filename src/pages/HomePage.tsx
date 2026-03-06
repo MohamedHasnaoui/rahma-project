@@ -106,12 +106,16 @@ const HomePage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fadeInUp delay-400">
             {[
               {
-                value: stats.supportedScholars,
-                label: "شيخ مدعوم",
+                value: stats.initiativesCompleted,
+                label: "مبادرة مكتملة",
                 icon: Users,
               },
               { value: stats.citiesCovered, label: "مدينة", icon: MapPin },
-              { value: `${stats.lessonsRecorded}+`, label: "درس", icon: Play },
+              {
+                value: `${stats.initiativesCompleted}+`,
+                label: "مبادرة",
+                icon: Play,
+              },
               {
                 value: `${(stats.beneficiaries / 1000).toFixed(0)}K`,
                 label: "مستفيد",
@@ -227,7 +231,7 @@ const HomePage = () => {
             </h2>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
               نتبع منهجية واضحة لضمان وصول دعمكم للمستحقين، ونعطي الأولوية
-              للمشايخ الأكثر نشاطاً في نشر العلم
+              للدعاة الأكثر نشاطاً في نشر العلم
             </p>
           </div>
 
@@ -236,19 +240,19 @@ const HomePage = () => {
               {
                 step: "01",
                 title: "نستقبل الطلبات",
-                desc: "نتلقى طلبات الدعم من المشايخ والدعاة",
+                desc: "نتلقى طلبات الدعم من الدعاة والأساتذة",
                 icon: Target,
               },
               {
                 step: "02",
                 title: "ندرس ونتحقق",
-                desc: "نتأكد من أهلية الشيخ وحاجته للدعم",
+                desc: "نتأكد من أهلية الداعية وحاجته للدعم",
                 icon: CheckCircle,
               },
               {
                 step: "03",
                 title: "نجهز ونسلم",
-                desc: "نوفر الأدوات اللازمة ونسلمها للشيخ",
+                desc: "نوفر الأدوات اللازمة ونسلمها للداعية",
                 icon: Camera,
               },
               {
@@ -466,17 +470,17 @@ const HomePage = () => {
                                 </div>
                               </div>
 
-                              {/* Scholars Count */}
+                              {/* Beneficiaries Count */}
                               <div className="flex items-center gap-4 mb-6 p-4 bg-white rounded-xl border border-gray-100">
                                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
                                   <Users className="w-6 h-6 text-emerald-600" />
                                 </div>
                                 <div>
                                   <p className="text-xl font-bold text-gray-900">
-                                    {initiative.scholars}
+                                    {initiative.beneficiaries}
                                   </p>
                                   <p className="text-sm text-gray-500">
-                                    مشايخ سيستفيدون
+                                    مستفيدون
                                   </p>
                                 </div>
                               </div>

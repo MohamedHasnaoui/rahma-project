@@ -17,15 +17,12 @@ import {
   Award,
   ChevronLeft,
 } from "lucide-react";
-import { initiatives, scholars } from "../data/siteData";
+import { initiatives } from "../data/siteData";
 
 const InitiativeDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const initiative = initiatives.find((i) => i.id === Number(id));
-
-  // Get scholars for this city
-  const cityScholars = scholars.filter((s) => s.city === initiative?.city);
 
   if (!initiative) {
     return (
@@ -151,7 +148,9 @@ const InitiativeDetailPage = () => {
               <div className="w-1 h-1 bg-white/50 rounded-full"></div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5" />
-                <span className="text-lg">{initiative.scholars} مشايخ</span>
+                <span className="text-lg">
+                  {initiative.beneficiaries} مستفيدون
+                </span>
               </div>
             </div>
           </div>
@@ -226,10 +225,10 @@ const InitiativeDetailPage = () => {
                   {initiative.description}
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  تهدف هذه المبادرة إلى دعم الدعاة والمشايخ في مدينة{" "}
-                  {initiative.city} من خلال توفير الأدوات التقنية اللازمة لتسجيل
-                  ونشر دروسهم العلمية. نسعى من خلال هذه المبادرة إلى إيصال العلم
-                  الشرعي الصحيح لأكبر عدد ممكن من المستفيدين.
+                  تهدف هذه المبادرة إلى دعم الدعاة في مدينة {initiative.city} من
+                  خلال توفير الأدوات التقنية اللازمة لتسجيل ونشر دروسهم العلمية.
+                  نسعى من خلال هذه المبادرة إلى إيصال العلم الشرعي الصحيح لأكبر
+                  عدد ممكن من المستفيدين.
                 </p>
               </div>
 
@@ -385,79 +384,17 @@ const InitiativeDetailPage = () => {
                       </p>
                       <p className="text-emerald-600 text-sm">
                         {initiative.equipment.length} تجهيزات لـ{" "}
-                        {initiative.scholars} مشايخ
+                        {initiative.beneficiaries} مستفيدين
                       </p>
                     </div>
                     <div className="text-left">
                       <p className="text-2xl font-bold text-emerald-700">
                         {(
-                          initiative.equipment.length * initiative.scholars
+                          initiative.equipment.length * initiative.beneficiaries
                         ).toLocaleString("ar-MA")}
                       </p>
                       <p className="text-emerald-600 text-sm">وحدة إجمالية</p>
                     </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Scholars Section */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 animate-fadeInUp delay-300">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <Users className="w-5 h-5 text-purple-600" />
-                  </div>
-                  المشايخ المستفيدون
-                  <span className="text-sm font-normal text-gray-500 mr-2">
-                    ({cityScholars.length} شيخ)
-                  </span>
-                </h2>
-
-                {cityScholars.length > 0 ? (
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {cityScholars.map((scholar) => (
-                      <div
-                        key={scholar.id}
-                        className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl hover:bg-purple-50 transition-colors group"
-                      >
-                        <div className="w-16 h-16 rounded-xl overflow-hidden shadow-md">
-                          <img
-                            src={scholar.image}
-                            alt={scholar.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-bold text-gray-900">
-                            {scholar.name}
-                          </h4>
-                          <p className="text-gray-600 text-sm">
-                            {scholar.specialty}
-                          </p>
-                          <div className="flex items-center gap-2 mt-1 text-sm text-gray-500">
-                            <BookOpen className="w-4 h-4" />
-                            <span>{scholar.lessonsCount} درس</span>
-                          </div>
-                        </div>
-                        {scholar.youtube && (
-                          <a
-                            href={scholar.youtube}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`قناة يوتيوب ${scholar.name}`}
-                            className="w-10 h-10 bg-red-100 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors group/yt"
-                          >
-                            <Youtube className="w-5 h-5 text-red-600 group-hover/yt:text-white" />
-                          </a>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-8 bg-gray-50 rounded-2xl">
-                    <Users className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                    <p className="text-gray-500">
-                      سيتم تحديد المشايخ المستفيدين قريباً
-                    </p>
                   </div>
                 )}
               </div>
@@ -545,9 +482,9 @@ const InitiativeDetailPage = () => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-3 border-b border-gray-100">
-                    <span className="text-gray-600">عدد المشايخ</span>
+                    <span className="text-gray-600">عدد المستفيدين</span>
                     <span className="font-medium text-gray-900">
-                      {initiative.scholars}
+                      {initiative.beneficiaries}
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-3">

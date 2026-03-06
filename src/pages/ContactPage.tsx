@@ -71,7 +71,7 @@ const ContactPage = () => {
             تواصل معنا
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-200">
-            نحن هنا للإجابة على استفساراتكم ومساعدتكم في كل ما يخص الجمعية
+            نحن هنا للإجابة على استفساراتكم ومساعدتكم في كل ما يخص المشروع
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ const ContactPage = () => {
                 color: "green",
                 href: `https://wa.me/${contactInfo.whatsapp?.replace(
                   /\s/g,
-                  ""
+                  "",
                 )}`,
               },
               {
@@ -358,9 +358,7 @@ const ContactPage = () => {
                         className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-gray-50 focus:bg-white"
                       >
                         <option value="استفسار عام">استفسار عام</option>
-                        <option value="طلب دعم لشيخ">
-                          طلب دعم لشيخ / داعية
-                        </option>
+                        <option value="طلب دعم">طلب دعم / تجهيز</option>
                         <option value="اقتراح">اقتراح</option>
                         <option value="شكوى">شكوى</option>
                         <option value="تطوع">طلب تطوع</option>
@@ -425,8 +423,8 @@ const ContactPage = () => {
           <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp delay-200">
             {[
               {
-                title: "طلب دعم لشيخ",
-                desc: "إذا كنت تعرف شيخاً يحتاج دعماً، تواصل معنا وسنقوم بدراسة الحالة",
+                title: "طلب دعم",
+                desc: "إذا كنت تعرف داعية يحتاج دعماً، تواصل معنا وسنقوم بدراسة الحالة",
                 icon: Users,
                 color: "emerald",
               },
@@ -478,8 +476,8 @@ const ContactPage = () => {
               <MapPin className="w-16 h-16 text-amber-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">المملكة المغربية</h3>
               <p className="text-emerald-100 text-lg mb-6 max-w-2xl mx-auto">
-                نعمل على دعم العلماء والمشايخ في مختلف المدن المغربية، من طنجة
-                شمالاً إلى الداخلة جنوباً
+                نعمل على دعم الدعاة في مختلف المدن المغربية، من طنجة شمالاً إلى
+                الداخلة جنوباً
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 {[
@@ -507,10 +505,10 @@ const ContactPage = () => {
       <section className="py-16 bg-gradient-to-l from-amber-400 to-yellow-500 animate-fadeInUp">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-4">
-            ساهم في دعم العلماء والمشايخ
+            ساهم في دعم الدعاة
           </h2>
           <p className="text-emerald-800 mb-8 text-lg">
-            تبرعك يصل مباشرة للمشايخ ويساهم في نشر العلم الشرعي
+            تبرعك يصل مباشرة للمستفيدين ويساهم في نشر العلم الشرعي
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

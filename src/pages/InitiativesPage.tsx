@@ -70,8 +70,8 @@ const InitiativesPage = () => {
                 color: "amber",
               },
               {
-                label: "إجمالي المشايخ",
-                value: initiatives.reduce((acc, i) => acc + i.scholars, 0),
+                label: "إجمالي المستفيدين",
+                value: initiatives.reduce((acc, i) => acc + i.beneficiaries, 0),
                 icon: Users,
                 color: "purple",
               },
@@ -229,9 +229,9 @@ const InitiativesPage = () => {
                         </div>
                         <div>
                           <p className="text-sm font-bold text-gray-900">
-                            {initiative.scholars}
+                            {initiative.beneficiaries}
                           </p>
-                          <p className="text-xs text-gray-500">مشايخ</p>
+                          <p className="text-xs text-gray-500">مستفيدون</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
@@ -320,9 +320,9 @@ const InitiativesPage = () => {
                         ? "قريباً"
                         : "مخططة"}
                   </span>
-                  {city.scholars > 0 && (
-                    <span className="text-amber-400 text-sm font-medium">
-                      {city.scholars} مشايخ
+                  {city.beneficiaries > 0 && (
+                    <span className="text-emerald-600 text-sm font-medium">
+                      {city.beneficiaries} مستفيدون
                     </span>
                   )}
                 </div>
@@ -339,7 +339,7 @@ const InitiativesPage = () => {
             ساهم في توسيع مبادراتنا
           </h2>
           <p className="text-emerald-800 mb-8 text-lg">
-            بدعمك نستطيع الوصول لمدن أكثر ودعم مشايخ أكثر
+            بدعمك نستطيع الوصول لمدن أكثر ودعم دعاة أكثر
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -348,13 +348,6 @@ const InitiativesPage = () => {
             >
               <Award className="w-5 h-5" />
               ساهم الآن
-            </Link>
-            <Link
-              to="/scholars"
-              className="bg-white hover:bg-gray-50 text-emerald-800 font-bold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2 hover-lift"
-            >
-              المشايخ المدعومون
-              <ArrowLeft className="w-5 h-5" />
             </Link>
           </div>
         </div>

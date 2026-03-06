@@ -36,7 +36,7 @@ const NewsPage = () => {
             آخر المستجدات
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp">
-            أخبار الجمعية
+            آخر الأخبار
           </h1>
           <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-200">
             تابع آخر أنشطتنا وإنجازاتنا في دعم العلماء والدعاة
