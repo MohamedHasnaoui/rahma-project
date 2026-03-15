@@ -7,7 +7,6 @@ import {
   MessageCircle,
   Clock,
   Heart,
-  Users,
   CheckCircle,
   ArrowLeft,
   Facebook,
@@ -25,7 +24,6 @@ const ContactPage = () => {
     email: "",
     phone: "",
     city: "",
-    subject: "استفسار عام",
     message: "",
   });
 
@@ -45,7 +43,6 @@ const ContactPage = () => {
         email: "",
         phone: "",
         city: "",
-        subject: "استفسار عام",
         message: "",
       });
     }, 1500);
@@ -347,28 +344,6 @@ const ContactPage = () => {
 
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2">
-                        نوع الرسالة *
-                      </label>
-                      <select
-                        required
-                        value={formData.subject}
-                        onChange={(e) =>
-                          setFormData({ ...formData, subject: e.target.value })
-                        }
-                        className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-gray-50 focus:bg-white"
-                      >
-                        <option value="استفسار عام">استفسار عام</option>
-                        <option value="طلب دعم">طلب دعم / تجهيز</option>
-                        <option value="اقتراح">اقتراح</option>
-                        <option value="شكوى">شكوى</option>
-                        <option value="تطوع">طلب تطوع</option>
-                        <option value="شهادة">إرسال شهادة / تزكية</option>
-                        <option value="أخرى">أخرى</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">
                         الرسالة *
                       </label>
                       <textarea
@@ -379,7 +354,7 @@ const ContactPage = () => {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-gray-50 focus:bg-white resize-none"
-                        placeholder="اكتب رسالتك هنا..."
+                        placeholder="اكتب استفسارك حول التبرع أو المشروع..."
                       />
                     </div>
 
@@ -423,21 +398,21 @@ const ContactPage = () => {
           <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp delay-200">
             {[
               {
-                title: "طلب دعم",
-                desc: "إذا كنت تعرف داعية يحتاج دعماً، تواصل معنا وسنقوم بدراسة الحالة",
-                icon: Users,
-                color: "emerald",
-              },
-              {
                 title: "استفسار عن التبرع",
                 desc: "لديك سؤال حول طرق التبرع أو كيفية وصول تبرعك؟ نجيبك",
                 icon: Heart,
                 color: "red",
               },
               {
-                title: "التطوع معنا",
-                desc: "انضم لفريقنا التطوعي وساهم في نشر العلم والخير",
+                title: "بيانات التحويل البنكي",
+                desc: "نوضح لك بيانات الحساب البنكي وكيفية تنفيذ التحويل بسهولة",
                 icon: CheckCircle,
+                color: "emerald",
+              },
+              {
+                title: "متابعة التبرع",
+                desc: "تواصل معنا لتأكيد تحويلك أو الاستفسار عن حالة مساهمتك",
+                icon: MessageCircle,
                 color: "blue",
               },
             ].map((item, index) => (

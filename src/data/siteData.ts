@@ -17,10 +17,10 @@ export const associationInfo = {
 
 // معلومات التواصل
 export const contactInfo = {
-  phone: "+212 535 XX XX XX",
-  email: "info@tajhizdouaat.org",
+  phone: "0638956790",
+  email: "m.boutglimt7@gmail.com",
   address: "مكناس، المغرب",
-  whatsapp: "+212 6XX XX XX XX",
+  whatsapp: "0638956790",
 };
 
 // روابط التواصل الاجتماعي
@@ -32,11 +32,11 @@ export const socialLinks = {
 
 // معلومات التبرع (RIB)
 export const donationInfo = {
-  bankName: "البنك الشعبي",
-  accountName: "مشروع تجهيز الدعاة",
-  rib: "000 000 0000000000000000 00",
-  iban: "MA00 0000 0000 0000 0000 0000 000",
-  swift: "XXXXMAXX",
+  bankName: "CIH BANK",
+  accountName: "MOUAD BOUTGLIMT",
+  rib: "230 640 3610453211011800 86",
+  iban: "غير متوفر حالياً",
+  swift: "غير متوفر حالياً",
 };
 
 // إحصائيات الإنجازات

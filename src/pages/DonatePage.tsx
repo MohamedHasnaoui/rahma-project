@@ -326,23 +326,31 @@ const DonatePage = () => {
               أثر تبرعك
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              ماذا يمكن أن يحقق تبرعك؟
+              كيف يظهر أثر مساهمتك؟
             </h2>
+            <p className="text-emerald-200 max-w-2xl mx-auto leading-relaxed">
+              مساهمتك تدعم تجهيز الدعاة واستمرار المبادرات وتحسين جودة نشر العلم
+              بحسب الحاجة المتاحة في كل مرحلة.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 animate-fadeInUp delay-200">
             {[
               {
-                amount: "500",
-                desc: "ميكروفون احترافي لداعية واحد",
+                title: "توفير التجهيزات الأساسية",
+                desc: "تسهم في توفير الأدوات والملحقات التي يحتاجها الدعاة للبدء أو الاستمرار.",
                 icon: HandHeart,
               },
               {
-                amount: "2000",
-                desc: "كاميرا كاملة مع ملحقاتها",
+                title: "تحسين جودة التسجيل والبث",
+                desc: "تساعد في رفع جودة الصوت والصورة بما يعين على نشر الدروس بشكل أفضل.",
                 icon: TrendingUp,
               },
-              { amount: "5000", desc: "تجهيز كامل لداعية واحد", icon: Star },
+              {
+                title: "دعم استمرار المبادرات",
+                desc: "تدعم استكمال التجهيزات في المدن الحالية وتوسيع العمل إلى مبادرات جديدة.",
+                icon: Star,
+              },
             ].map((item, index) => (
               <div
                 key={index}
@@ -351,9 +359,9 @@ const DonatePage = () => {
                 <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-8 h-8 text-emerald-900" />
                 </div>
-                <p className="text-3xl font-bold text-white mb-2">
-                  {item.amount} <span className="text-lg">درهم</span>
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-emerald-200">{item.desc}</p>
               </div>
             ))}
