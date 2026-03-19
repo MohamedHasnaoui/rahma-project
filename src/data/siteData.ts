@@ -642,9 +642,6 @@ export const navLinks = [
   { name: "مبادراتنا", path: "/initiatives" },
   { name: "ساهم معنا", path: "/donate" },
   { name: "حملة فلسطين", path: "/palestine" },
-  { name: "الشفافية", path: "/transparency" },
-  { name: "الأخبار", path: "/news" },
-  { name: "شهادات", path: "/testimonials" },
   { name: "أسئلة شائعة", path: "/faq" },
   { name: "تواصل معنا", path: "/contact" },
 ];

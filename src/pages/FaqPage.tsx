@@ -271,10 +271,10 @@ const FaqPage = () => {
                 color: "blue",
               },
               {
-                title: "الشفافية المالية",
-                desc: "اطلع على تقاريرنا المالية",
+                title: "تواصل معنا",
+                desc: "راسلنا لأي استفسار حول التبرع والمبادرات",
                 icon: Shield,
-                link: "/transparency",
+                link: "/contact",
                 color: "amber",
               },
               {

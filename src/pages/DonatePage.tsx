@@ -419,10 +419,10 @@ const DonatePage = () => {
               تواصل معنا
             </Link>
             <Link
-              to="/transparency"
+              to="/contact"
               className="bg-white hover:bg-gray-50 text-emerald-800 font-bold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2 hover-lift"
             >
-              تقارير الشفافية
+              تواصل معنا
               <ArrowLeft className="w-5 h-5" />
             </Link>
           </div>

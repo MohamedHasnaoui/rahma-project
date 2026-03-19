@@ -9,14 +9,10 @@ import {
   Heart,
   CheckCircle,
   ArrowLeft,
-  Facebook,
-  Instagram,
-  Youtube,
-  Globe,
   Headphones,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { contactInfo, socialLinks } from "../data/siteData";
+import { contactInfo } from "../data/siteData";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -193,46 +189,6 @@ const ContactPage = () => {
                           {contactInfo.whatsapp}
                         </p>
                       </div>
-                    </div>
-                  </div>
-
-                  <hr className="border-white/20 my-8" />
-
-                  <div>
-                    <p className="text-emerald-200 mb-4">
-                      تابعونا على وسائل التواصل
-                    </p>
-                    <div className="flex gap-3">
-                      <a
-                        href={socialLinks.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover-lift"
-                      >
-                        <Facebook className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={socialLinks.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 bg-white/10 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 hover-lift"
-                      >
-                        <Instagram className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={socialLinks.youtube}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all duration-300 hover-lift"
-                      >
-                        <Youtube className="w-5 h-5" />
-                      </a>
-                      <a
-                        href="#"
-                        className="w-12 h-12 bg-white/10 hover:bg-emerald-600 rounded-xl flex items-center justify-center transition-all duration-300 hover-lift"
-                      >
-                        <Globe className="w-5 h-5" />
-                      </a>
                     </div>
                   </div>
                 </div>

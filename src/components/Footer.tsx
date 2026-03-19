@@ -1,28 +1,20 @@
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "../images/association_logo.png";
-import { contactInfo, socialLinks, associationInfo } from "../data/siteData";
+import { contactInfo, associationInfo } from "../data/siteData";
 
 const Footer = () => {
   const quickLinks = [
     { name: "من نحن", path: "/about" },
     { name: "مبادراتنا", path: "/initiatives" },
     { name: "ساهم معنا", path: "/donate" },
-    { name: "الشفافية والتقارير", path: "/transparency" },
+    { name: "أسئلة شائعة", path: "/faq" },
     { name: "تواصل معنا", path: "/contact" },
   ];
 
   const otherLinks = [
-    { name: "آخر الأخبار", path: "/news" },
-    { name: "شهادات وتزكيات", path: "/testimonials" },
-    { name: "أسئلة شائعة", path: "/faq" },
+    { name: "الأجهزة", path: "/equipment" },
+    { name: "التبرع", path: "/donate" },
     { name: "حملة فلسطين", path: "/palestine" },
   ];
 
@@ -49,36 +41,6 @@ const Footer = () => {
             <p className="text-emerald-200 text-sm leading-relaxed mb-4">
               {associationInfo.mission}
             </p>
-            {/* Social Links */}
-            <div className="flex gap-3">
-              <a
-                href={socialLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-emerald-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href={socialLinks.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-emerald-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href={socialLinks.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-emerald-800 hover:bg-red-600 rounded-full flex items-center justify-center transition"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}

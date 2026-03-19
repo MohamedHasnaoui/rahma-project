@@ -289,13 +289,13 @@ const PalestinePage = () => {
                   </h2>
                   <p className="text-green-100 text-lg mb-6 leading-relaxed">
                     نحرص على الشفافية التامة في التعامل مع تبرعاتكم. كل درهم
-                    يُوثق ويُصرف في مكانه الصحيح مع تقارير دورية.
+                    يُوثق ويُصرف في مكانه الصحيح.
                   </p>
                   <Link
-                    to="/transparency"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-green-800 font-bold px-6 py-3 rounded-full transition-all duration-300 hover:bg-green-50 hover-lift"
                   >
-                    اطلع على التقارير
+                    تواصل معنا
                     <ArrowLeft className="w-5 h-5" />
                   </Link>
                 </div>

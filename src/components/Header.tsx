@@ -1,17 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Newspaper,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  Heart,
-  Shield,
-  Users,
-} from "lucide-react";
+import { Menu, X, ChevronDown, HelpCircle, Heart } from "lucide-react";
 import logo from "../images/association_logo.png";
 
 const Header = () => {
@@ -45,17 +34,15 @@ const Header = () => {
     { name: "من نحن", path: "/about" },
     { name: "مبادراتنا", path: "/initiatives" },
     { name: "الأجهزة", path: "/equipment" },
+    { name: "أسئلة شائعة", path: "/faq" },
   ];
 
-  const moreLinks = {
-    label: "المزيد",
-    items: [
-      { name: "الأخبار", path: "/news", icon: Newspaper },
-      { name: "شهادات وتزكيات", path: "/testimonials", icon: MessageCircle },
-      { name: "أسئلة شائعة", path: "/faq", icon: HelpCircle },
-      { name: "الشفافية", path: "/transparency", icon: Shield },
-    ],
-  };
+  // const moreLinks = {
+  //   label: "المزيد",
+  //   items: [
+  //     { name: "أسئلة شائعة", path: "/faq", icon: HelpCircle },
+  //   ],
+  // };
 
   const actionLinks = [
     { name: "حملة فلسطين", path: "/palestine", highlight: true },
@@ -63,8 +50,8 @@ const Header = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-  const isDropdownActive = () =>
-    moreLinks.items.some((item) => location.pathname === item.path);
+  // const isDropdownActive = () =>
+  //   moreLinks.items.some((item) => location.pathname === item.path);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
@@ -97,7 +84,7 @@ const Header = () => {
 
           {/* More Dropdown */}
           <div className="relative">
-            <button
+            {/* <button
               onClick={() =>
                 setActiveDropdown(activeDropdown === "more" ? null : "more")
               }
@@ -113,10 +100,10 @@ const Header = () => {
                   activeDropdown === "more" ? "rotate-180" : ""
                 }`}
               />
-            </button>
+            </button> */}
 
             {/* Dropdown Menu */}
-            {activeDropdown === "more" && (
+            {/* {activeDropdown === "more" && (
               <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 animate-fadeInDown z-50">
                 {moreLinks.items.map((item) => (
                   <Link
@@ -133,7 +120,7 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Contact Link */}
@@ -210,7 +197,7 @@ const Header = () => {
             ))}
 
             {/* More Section */}
-            <div className="border-t border-emerald-100 mt-2 pt-2">
+            {/* <div className="border-t border-emerald-100 mt-2 pt-2">
               <p className="px-4 py-2 text-sm text-gray-500 font-medium">
                 المزيد
               </p>
@@ -229,7 +216,7 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-            </div>
+            </div> */}
 
             {/* Contact */}
             <div className="border-t border-emerald-100 mt-2 pt-2">

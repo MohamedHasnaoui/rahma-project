@@ -8,9 +8,6 @@ import InitiativesPage from "./pages/InitiativesPage";
 import InitiativeDetailPage from "./pages/InitiativeDetailPage";
 import DonatePage from "./pages/DonatePage";
 import PalestinePage from "./pages/PalestinePage";
-import TransparencyPage from "./pages/TransparencyPage";
-import NewsPage from "./pages/NewsPage";
-import TestimonialsPage from "./pages/TestimonialsPage";
 import FaqPage from "./pages/FaqPage";
 import ContactPage from "./pages/ContactPage";
 import EquipmentPage from "./pages/EquipmentPage";
@@ -29,9 +26,6 @@ function App() {
           <Route path="/equipment" element={<EquipmentPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/palestine" element={<PalestinePage />} />
-          <Route path="/transparency" element={<TransparencyPage />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
