@@ -19,9 +19,20 @@ import {
 import { stats, initiatives, featuredEquipment } from "../data/siteData";
 
 const HomePage = () => {
-  // Get ongoing initiatives for the carousel
+  // Prioritize initiatives by status for the carousel
+  const statusPriority: Record<string, number> = {
+    "جارية": 1,
+    "قريباً": 2,
+    "مكتملة": 3,
+  };
+
   const ongoingInitiatives = initiatives
-    .filter((i) => i.status === "جارية" || i.status === "قريباً")
+    .slice()
+    .sort(
+      (a, b) =>
+        (statusPriority[a.status] ?? Number.MAX_SAFE_INTEGER) -
+        (statusPriority[b.status] ?? Number.MAX_SAFE_INTEGER),
+    )
     .slice(0, 3);
   const [currentSlide, setCurrentSlide] = useState(0);
 
