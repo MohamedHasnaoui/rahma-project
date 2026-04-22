@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { donationInfo, stats } from "../data/siteData";
+import { donationInfo } from "../data/siteData";
 
 const DonatePage = () => {
   const [copied, setCopied] = useState<string | null>(null);

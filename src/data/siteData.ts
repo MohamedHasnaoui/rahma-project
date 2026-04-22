@@ -35,8 +35,8 @@ export const donationInfo = {
   bankName: "CIH BANK",
   accountName: "MOUAD BOUTGLIMT",
   rib: "230 640 3610453211011800 86",
-  iban: "غير متوفر حالياً",
-  swift: "غير متوفر حالياً",
+  iban: "MA64 2306 4036 1045 3211 0118 0086",
+  swift: "CIHMMAMC",
 };
 
 // إحصائيات الإنجازات
@@ -512,7 +512,7 @@ export const equipmentCatalog = [
     id: 4,
     name: "إضاءة LED احترافية",
     nameEn: "Professional LED Lights",
-    price: 20000,
+    price: 2000,
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
     description: "إضاءة مثالية للتصوير",
@@ -619,7 +619,7 @@ export const featuredEquipment = [
     id: 2,
     name: "إضاءة LED احترافية",
     nameEn: "Professional LED Lights",
-    price: 20000,
+    price: 2000,
     image:
       "https://res.cloudinary.com/dkusmaiyc/image/upload/w_400,h_400,c_pad/v1770237902/WhatsApp_Image_2026-02-04_at_21.41.50_skzoec.png",
     description: "إضاءة مثالية للتصوير",

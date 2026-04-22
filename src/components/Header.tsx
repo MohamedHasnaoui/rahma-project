@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, HelpCircle, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "../images/association_logo.png";
 
 const Header = () => {
