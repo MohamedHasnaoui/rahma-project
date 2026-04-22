@@ -13,12 +13,35 @@ import {
   TrendingUp,
   FileText,
 } from "lucide-react";
+import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 import { palestineCampaign } from "../data/siteData";
 
 const PalestinePage = () => {
   const progressPercentage =
     (palestineCampaign.currentAmount / palestineCampaign.goalAmount) * 100;
+  const videoAnimationClasses = ["", "animate-delay-200", "animate-delay-400"];
+
+  const campaignVideos = [
+    {
+      title: "توزيع مساعدات نقدية - غزة",
+      url: "https://vimeo.com/1185624905?fl=tl&fe=ec",
+      summary:
+        "يوثق توزيع مساعدات مالية نقدية على عائلات نازحة في غزة بدعم كريم من متبرعين من مدن مغربية، مع رسائل شكر ودعاء صادقة للمحسنين.",
+    },
+    {
+      title: "سقيا الماء - غرب مدينة غزة",
+      url: "https://vimeo.com/1185624751?fl=tl&fe=ec",
+      summary:
+        "يوثق حملة توزيع مياه الشرب النظيفة عبر صهريج ماء للأهالي والنازحين وسط الدمار، بدعم من أهل المغرب وخاصة متبرعين من مدينة مكناس.",
+    },
+    {
+      title: "توزيع مساعدات نقدية - مواصي خانيونس",
+      url: "https://vimeo.com/1185624752?fl=tl&fe=ec",
+      summary:
+        "يوثق كلمة تعريفية حول المبادرة ثم مشاهد ميدانية لتوزيع مساعدات نقدية يداً بيد على الأسر المتعففة في مواصي خانيونس، مع رسائل امتنان للمتبرعين من المغرب.",
+    },
+  ];
 
   return (
     <div>
@@ -107,7 +130,7 @@ const PalestinePage = () => {
               </div>
 
               {/* Progress Section */}
-              <div className="bg-gradient-to-l from-green-50 to-emerald-50 rounded-2xl p-6 mb-8 border border-green-100">
+              {/* <div className="bg-gradient-to-l from-green-50 to-emerald-50 rounded-2xl p-6 mb-8 border border-green-100">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
@@ -138,21 +161,18 @@ const PalestinePage = () => {
                 </div>
 
                 <div className="relative">
-                  <div className="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
-                    <div
-                      className="bg-gradient-to-l from-green-500 to-emerald-500 h-full rounded-full transition-all duration-1000 relative"
-                      style={{ width: `${progressPercentage}%` }}
-                    >
-                      <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-                    </div>
-                  </div>
+                  <progress
+                    value={palestineCampaign.currentAmount}
+                    max={palestineCampaign.goalAmount}
+                    className="w-full h-6 overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-gray-200 [&::-webkit-progress-value]:bg-gradient-to-l [&::-webkit-progress-value]:from-green-500 [&::-webkit-progress-value]:to-emerald-500 [&::-moz-progress-bar]:bg-gradient-to-l [&::-moz-progress-bar]:from-green-500 [&::-moz-progress-bar]:to-emerald-500"
+                  />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <span className="bg-white px-3 py-1 rounded-full text-sm font-bold text-green-600 shadow-sm">
                       {progressPercentage.toFixed(0)}%
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Updates */}
               <div className="mb-8">
@@ -265,6 +285,56 @@ const PalestinePage = () => {
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Field Videos Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <span className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <CheckCircle className="w-4 h-4" />
+              توثيق ميداني
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              فيديوهات من أرض الواقع
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              توثيق مباشر لمبادرات الإغاثة في غزة وخانيونس، بفضل دعم المحسنين
+              والمتبرعين.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {campaignVideos.map((video, index) => (
+              <article
+                key={video.url}
+                className={`bg-white border border-gray-100 rounded-3xl shadow-lg overflow-hidden animate-fadeInUp ${videoAnimationClasses[index] ?? ""} ${index === 2 ? "lg:col-span-2" : ""}`}
+              >
+                <div className="aspect-video bg-black">
+                  <ReactPlayer
+                    url={video.url}
+                    controls
+                    width="100%"
+                    height="100%"
+                    playsinline
+                    className="!w-full !h-full"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {video.title}
+                    </h3>
+                    <span className="text-xs font-semibold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                      فيديو {index + 1}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{video.summary}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
