@@ -1,0 +1,49 @@
+/* src/components/plyr-custom.css */
+
+:root {
+  --plyr-color-main: #10b981; /* emerald-500 */
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded="true"] {
+  background: var(--plyr-color-main);
+  color: white;
+}
+
+.plyr__control--overlaid {
+  background: rgba(255, 255, 255, 0.8);
+  color: #059669; /* green-600 */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(22, 163, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.plyr__control--overlaid:hover {
+  background: var(--plyr-color-main);
+  color: white;
+}
+
+.plyr__progress input[type="range"] {
+  color: var(--plyr-color-main);
+}
+
+.plyr__progress input[type="range"]::-webkit-slider-thumb {
+  background: white;
+  border: 2px solid var(--plyr-color-main);
+  box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
+}
+
+.plyr__progress input[type="range"]::-moz-range-thumb {
+  background: white;
+  border: 2px solid var(--plyr-color-main);
+  box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
+}
+
+.plyr__volume input[type="range"] {
+  color: var(--plyr-color-main);
+}
+
+.plyr__menu__button__value {
+  color: var(--plyr-color-main);
+}

@@ -9,11 +9,11 @@ import {
   Sparkles,
   Globe,
   Calendar,
-  Target,
-  TrendingUp,
   FileText,
 } from "lucide-react";
-import ReactPlayer from "react-player";
+import { Plyr } from "plyr-react";
+import "plyr-react/plyr.css";
+import "../components/plyr-custom.css";
 import { Link } from "react-router-dom";
 import { palestineCampaign } from "../data/siteData";
 
@@ -25,19 +25,19 @@ const PalestinePage = () => {
   const campaignVideos = [
     {
       title: "توزيع مساعدات نقدية - غزة",
-      url: "https://vimeo.com/1185624905?fl=tl&fe=ec",
+      url: "https://res.cloudinary.com/dkusmaiyc/video/upload/v1776891138/ghaza2_ajhehq.mp4",
       summary:
         "يوثق توزيع مساعدات مالية نقدية على عائلات نازحة في غزة بدعم كريم من متبرعين من مدن مغربية، مع رسائل شكر ودعاء صادقة للمحسنين.",
     },
     {
       title: "سقيا الماء - غرب مدينة غزة",
-      url: "https://vimeo.com/1185624751?fl=tl&fe=ec",
+      url: "https://res.cloudinary.com/dkusmaiyc/video/upload/v1776891288/ghaza3_c3ghro.mp4",
       summary:
         "يوثق حملة توزيع مياه الشرب النظيفة عبر صهريج ماء للأهالي والنازحين وسط الدمار، بدعم من أهل المغرب وخاصة متبرعين من مدينة مكناس.",
     },
     {
       title: "توزيع مساعدات نقدية - مواصي خانيونس",
-      url: "https://vimeo.com/1185624752?fl=tl&fe=ec",
+      url: "https://res.cloudinary.com/dkusmaiyc/video/upload/v1776891225/ghaza1_uvktsg.mp4",
       summary:
         "يوثق كلمة تعريفية حول المبادرة ثم مشاهد ميدانية لتوزيع مساعدات نقدية يداً بيد على الأسر المتعففة في مواصي خانيونس، مع رسائل امتنان للمتبرعين من المغرب.",
     },
@@ -53,6 +53,7 @@ const PalestinePage = () => {
             alt="فلسطين"
             className="w-full h-full object-cover"
           />
+
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/40"></div>
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
@@ -60,7 +61,6 @@ const PalestinePage = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20 animate-fadeInDown">
-            <span className="text-2xl">🇵🇸</span>
             <span className="font-semibold">حملة نصرة فلسطين</span>
           </div>
 
@@ -115,7 +115,7 @@ const PalestinePage = () => {
                   </div>
                 </div>
                 <div className="bg-white/20 px-4 py-2 rounded-full">
-                  <span className="text-white font-bold">🇵🇸 فلسطين</span>
+                  <span className="text-white font-bold">فلسطين</span>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ const PalestinePage = () => {
             <div className="p-6 md:p-8">
               {/* Description */}
               <div className="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100">
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed text-center md:text-start">
                   {palestineCampaign.description}
                 </p>
               </div>
@@ -231,6 +231,68 @@ const PalestinePage = () => {
         </div>
       </section>
 
+      {/* Field Videos Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <span className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <CheckCircle className="w-4 h-4" />
+              توثيق ميداني
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              فيديوهات من أرض الواقع
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              توثيق مباشر لمبادرات الإغاثة في غزة وخانيونس، بفضل دعم المحسنين
+              والمتبرعين.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {campaignVideos.map((video, index) => (
+              <article
+                key={video.url}
+                className={`bg-white border border-gray-100 rounded-3xl shadow-lg overflow-hidden animate-fadeInUp ${videoAnimationClasses[index] ?? ""} ${index === 2 ? "lg:col-span-2" : ""}`}
+              >
+                <div className="aspect-video">
+                  <Plyr
+                    source={{
+                      type: "video",
+                      sources: [{ src: video.url, provider: "html5" }],
+                    }}
+                    options={{
+                      ratio: "16:9",
+                      controls: [
+                        "play-large",
+                        "play",
+                        "progress",
+                        "current-time",
+                        "mute",
+                        "volume",
+                        "fullscreen",
+                      ],
+                    }}
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {video.title}
+                    </h3>
+                    <div className="text-xs font-semibold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                      فيديو&nbsp;{index + 1}
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-center md:text-start">
+                    {video.summary}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How We Help Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,56 +347,6 @@ const PalestinePage = () => {
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Field Videos Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <span className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <CheckCircle className="w-4 h-4" />
-              توثيق ميداني
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              فيديوهات من أرض الواقع
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              توثيق مباشر لمبادرات الإغاثة في غزة وخانيونس، بفضل دعم المحسنين
-              والمتبرعين.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {campaignVideos.map((video, index) => (
-              <article
-                key={video.url}
-                className={`bg-white border border-gray-100 rounded-3xl shadow-lg overflow-hidden animate-fadeInUp ${videoAnimationClasses[index] ?? ""} ${index === 2 ? "lg:col-span-2" : ""}`}
-              >
-                <div className="aspect-video bg-black">
-                  <ReactPlayer
-                    url={video.url}
-                    controls
-                    width="100%"
-                    height="100%"
-                    playsinline
-                    className="!w-full !h-full"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between gap-3 mb-3">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {video.title}
-                    </h3>
-                    <span className="text-xs font-semibold text-green-700 bg-green-100 px-3 py-1 rounded-full">
-                      فيديو {index + 1}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">{video.summary}</p>
-                </div>
-              </article>
             ))}
           </div>
         </div>
