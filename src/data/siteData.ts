@@ -43,7 +43,7 @@ export const donationInfo = {
 export const stats = {
   citiesCovered: 2,
   initiativesCompleted: 2,
-  beneficiaries: 0,
+  beneficiaries: 2,
 };
 
 // المبادرات
