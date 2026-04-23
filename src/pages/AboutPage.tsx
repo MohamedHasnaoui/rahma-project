@@ -57,9 +57,8 @@ const AboutPage = () => {
                 <span className="text-emerald-600">مشروع تجهيز الدعاة</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                {associationInfo.fullName} هي مبادرة خيرية مغربية انطلقت عام{" "}
-                {associationInfo.foundedYear}، تهدف إلى نشر العلم الشرعي الصحيح
-                في جميع أنحاء المغرب.
+                {associationInfo.fullName} هي مبادرة خيرية مغربية تهدف إلى نشر
+                العلم الشرعي الصحيح في جميع أنحاء المغرب.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8 text-lg">
                 نعمل على دعم الدعاة والأساتذة الثقات بتوفير أدوات التصوير والبث
@@ -100,10 +99,8 @@ const AboutPage = () => {
                     <Award className="w-6 h-6 text-emerald-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">
-                      +{new Date().getFullYear() - associationInfo.foundedYear}
-                    </p>
-                    <p className="text-gray-600 text-sm">سنوات من العطاء</p>
+                    <p className="text-2xl font-bold text-gray-900">عطاء مستمر</p>
+                    <p className="text-gray-600 text-sm">بإذن الله تعالى</p>
                   </div>
                 </div>
               </div>
@@ -258,9 +255,9 @@ const AboutPage = () => {
                 color: "emerald",
               },
               {
-                title: "الشفافية",
-                desc: "ننشر تقاريرنا المالية بشكل دوري ومنتظم",
-                icon: Eye,
+                title: "التوثيق",
+                desc: "نوثق مشاريعنا وأنشطتنا ونشارك مستجداتها بانتظام",
+                icon: Camera,
                 color: "blue",
               },
               {
@@ -331,7 +328,7 @@ const AboutPage = () => {
                     icon: BookOpen,
                   },
                   {
-                    value: `${(stats.beneficiaries / 1000).toFixed(0)}K`,
+                    value: `${stats.beneficiaries.toFixed(0)}`,
                     label: "مستفيد",
                     icon: TrendingUp,
                   },
