@@ -44,16 +44,7 @@ const HomePage = () => {
     return () => clearInterval(timer);
   }, [ongoingInitiatives.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % ongoingInitiatives.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) =>
-        (prev - 1 + ongoingInitiatives.length) % ongoingInitiatives.length,
-    );
-  };
+  
 
   return (
     <div>
@@ -128,7 +119,7 @@ const HomePage = () => {
                 icon: Play,
               },
               {
-                value: `${(stats.beneficiaries / 1000).toFixed(0)}K`,
+                value: `${stats.beneficiaries.toFixed(0)}`,
                 label: "مستفيد",
                 icon: Heart,
               },
